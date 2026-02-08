@@ -58,39 +58,10 @@
 
   $$(".reveal").forEach(el => io.observe(el));
 
-  // ----- Tilt (lightweight)
-  const tiltEls = $$(".tilt");
-  const clamp = (v, a, b) => Math.min(b, Math.max(a, v));
-  const prefersReduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-  if (!prefersReduce) {
-    tiltEls.forEach((el) => {
-      let raf = 0;
-      const onMove = (ev) => {
-        const r = el.getBoundingClientRect();
-        const x = (ev.clientX - r.left) / r.width;
-        const y = (ev.clientY - r.top) / r.height;
-        const rx = clamp((0.5 - y) * 10, -10, 10);
-        const ry = clamp((x - 0.5) * 12, -12, 12);
-        if (raf) cancelAnimationFrame(raf);
-        raf = requestAnimationFrame(() => {
-          el.style.transform = `perspective(900px) rotateX(${rx}deg) rotateY(${ry}deg) translateY(-1px)`;
-        });
-      };
-      const onLeave = () => {
-        if (raf) cancelAnimationFrame(raf);
-        el.style.transition = "transform .22s ease";
-        el.style.transform = "perspective(900px) rotateX(0deg) rotateY(0deg)";
-        setTimeout(() => (el.style.transition = ""), 240);
-      };
-      el.addEventListener("mousemove", onMove);
-      el.addEventListener("mouseleave", onLeave);
-    });
-  }
-
   // ----- Magnetic buttons
   const mags = $$(".magnetic");
-  if (!prefersReduce) {
+  const finePointer = window.matchMedia && window.matchMedia('(pointer:fine)').matches;
+  if (!prefersReduce && finePointer) {
     mags.forEach((btn) => {
       let raf = 0;
       const strength = 0.35;
@@ -142,7 +113,7 @@
     { r: 255, g: 59, b: 212, a: 0.65 },
   ];
 
-  const N = prefersReduce ? 0 : Math.floor((W * H) / 32000);
+  const N = prefersReduce ? 0 : Math.floor((W * H) / (window.innerWidth < 760 ? 42000 : 32000));
   const parts = Array.from({ length: clamp(N, 18, 70) }, () => {
     const c = palette[(Math.random() * palette.length) | 0];
     return {

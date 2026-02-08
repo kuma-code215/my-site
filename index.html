@@ -90,7 +90,7 @@
       </div>
 
       <div class="hero__right reveal">
-        <div class="device tilt">
+        <div class="device">
           <div class="device__top">
             <div class="device__dots">
               <span></span><span></span><span></span>
@@ -102,11 +102,37 @@
           </div>
 
           <div class="device__screen">
-            <img src="assets/hero-visual.svg" alt="Neon UI preview" class="device__img"/>
-            <div class="device__hud">
-              <div class="hud__line"></div>
-              <div class="hud__line"></div>
-              <div class="hud__line"></div>
+            <div class="preview">
+              <div class="preview__row">
+                <div class="tag">HIGH QUALITY</div>
+                <div class="status"><span class="s-dot"></span>LIVE</div>
+              </div>
+
+              <div class="preview__bar">
+                <span class="bar a"></span>
+                <span class="bar b"></span>
+                <span class="bar c"></span>
+              </div>
+
+              <div class="preview__grid">
+                <div class="mini mini--1"></div>
+                <div class="mini mini--2"></div>
+                <div class="mini mini--3"></div>
+              </div>
+
+              <div class="preview__code" aria-hidden="true">
+                <div class="ln w80"></div>
+                <div class="ln w68"></div>
+                <div class="ln w92"></div>
+                <div class="ln w55"></div>
+                <div class="ln w76"></div>
+                <div class="ln w88"></div>
+              </div>
+
+              <div class="preview__shot">
+                <img src="assets/hero-visual.svg" alt="Neon UI preview" class="device__img"/>
+                <div class="shine"></div>
+              </div>
             </div>
           </div>
 
@@ -132,7 +158,7 @@
       </div>
 
       <div class="grid3">
-        <article class="card reveal tilt">
+        <article class="card reveal hover-glow">
           <div class="card__icon">◆</div>
           <h3>ホームページ制作</h3>
           <p>LP / コーポレート / ポートフォリオ。世界観×導線で“仕事が来る”形に。</p>
@@ -143,7 +169,7 @@
           </ul>
         </article>
 
-        <article class="card reveal tilt">
+        <article class="card reveal hover-glow">
           <div class="card__icon">▣</div>
           <h3>iOS開発</h3>
           <p>SwiftUIで気持ちいいUI。見せ方・動き・触り心地にこだわる。</p>
@@ -154,7 +180,7 @@
           </ul>
         </article>
 
-        <article class="card reveal tilt">
+        <article class="card reveal hover-glow">
           <div class="card__icon">✦</div>
           <h3>Motion / UI演出</h3>
           <p>派手だけど軽い。ゲーミング感を“品良く”盛る。</p>
@@ -165,7 +191,52 @@
           </ul>
         </article>
       </div>
+    
+    <section class="section container">
+      <div class="section__head">
+        <h2 class="reveal">What you get</h2>
+        <p class="section__sub reveal">“見た目” + “成果” + “運用しやすさ” までセット。</p>
+      </div>
+
+      <div class="grid3">
+        <div class="panel reveal">
+          <div class="panel__k">Design</div>
+          <div class="panel__t">世界観を統一</div>
+          <div class="panel__d">配色・余白・タイポ・動き。全部を一本のトーンにまとめる。</div>
+        </div>
+        <div class="panel reveal">
+          <div class="panel__k">UX</div>
+          <div class="panel__t">迷わない導線</div>
+          <div class="panel__d">見せたい順に配置。問い合わせまで“最短で気持ちいい”。</div>
+        </div>
+        <div class="panel reveal">
+          <div class="panel__k">Speed</div>
+          <div class="panel__t">高速で形にする</div>
+          <div class="panel__d">まず動くものを作って、そこから磨き上げていく。</div>
+        </div>
+      </div>
+
+      <div class="badges reveal" aria-label="stack">
+        <span>SwiftUI</span><span>Animation</span><span>GitHub Pages</span><span>LP</span><span>Corporate</span><span>Motion UI</span>
+      </div>
     </section>
+
+    <section class="section container cta-strip">
+      <div class="cta reveal">
+        <div class="cta__l">
+          <div class="cta__t">最短で“カッコいい”を作る。まずDMでOK。</div>
+          <div class="cta__d">相談→方向性→制作までスムーズに進める。</div>
+        </div>
+        <div class="cta__r">
+          <a class="btn btn--primary magnetic" target="_blank" rel="noreferrer"
+             href="https://www.instagram.com/kumamaru_ios_app/">Instagram DM</a>
+          <a class="btn btn--ghost magnetic" target="_blank" rel="noreferrer"
+             href="https://www.threads.net/@kumamaru_ios_app">Threads DM</a>
+        </div>
+      </div>
+    </section>
+
+</section>
 
     <section id="strength" class="section container">
       <div class="section__head">
@@ -242,17 +313,17 @@
       </div>
 
       <div class="grid3">
-        <article class="price reveal tilt">
+        <article class="price reveal hover-glow">
           <div class="price__t">LP</div>
           <div class="price__v">¥xx,xxx〜</div>
           <div class="price__d">1ページ / 演出込み / 公開まで</div>
         </article>
-        <article class="price reveal tilt">
+        <article class="price reveal hover-glow">
           <div class="price__t">サイト</div>
           <div class="price__v">¥xxx,xxx〜</div>
           <div class="price__d">複数ページ / 構成設計 / 運用考慮</div>
         </article>
-        <article class="price reveal tilt">
+        <article class="price reveal hover-glow">
           <div class="price__t">iOS</div>
           <div class="price__v">相談</div>
           <div class="price__d">UI/演出/プロトタイプなど</div>
@@ -260,7 +331,30 @@
       </div>
     </section>
 
-    <section id="contact" class="section container contact">
+    
+    <section class="section container">
+      <div class="section__head">
+        <h2 class="reveal">FAQ</h2>
+        <p class="section__sub reveal">よくある質問だけ先に。</p>
+      </div>
+
+      <div class="faq">
+        <details class="faq__item reveal">
+          <summary>費用感はどれくらい？</summary>
+          <div class="faq__a">上のPricingは目安。内容・ページ数・演出量で調整。まずDMでざっくり聞いてOK。</div>
+        </details>
+        <details class="faq__item reveal">
+          <summary>素材（文章/画像）が無くても作れる？</summary>
+          <div class="faq__a">大丈夫。こちらで“仮素材”で先に組んで、あとから差し替える進め方が速い。</div>
+        </details>
+        <details class="faq__item reveal">
+          <summary>GitHub Pagesで公開しても大丈夫？</summary>
+          <div class="faq__a">LPなら相性◎。運用がラクで、更新もすぐ反映できる。</div>
+        </details>
+      </div>
+    </section>
+
+<section id="contact" class="section container contact">
       <div class="contact__box reveal">
         <h2>Contact</h2>
         <p>SNSのDMでOK。<span class="handle">@kumamaru_ios_app</span></p>
