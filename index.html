@@ -2,462 +2,292 @@
 <html lang="ja">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#050712" />
-  <meta name="description" content="ホームページ制作とiOS開発を事業として提供。ゲーミング×シネマティックな演出で、体験から差がつくプロダクトを。" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>kuma-code | Web制作 / iOS開発</title>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet">
-
+  <meta name="description" content="ホームページ制作 / iOS開発。カッコよく、速く、刺さる。UI演出・設計・実装まで一気通貫。" />
+  <meta name="theme-color" content="#05060a" />
+  <link rel="preconnect" href="https://www.instagram.com" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- Cinematic backdrop -->
-  <canvas id="fx" aria-hidden="true"></canvas>
-  <div class="noise" aria-hidden="true"></div>
-  <div class="vignette" aria-hidden="true"></div>
+  <div class="bg" aria-hidden="true">
+    <canvas id="fx"></canvas>
+    <div class="vignette"></div>
+    <div class="scan"></div>
+    <div class="grain"></div>
+  </div>
 
-  <!-- Top Nav -->
-  <header class="topbar" id="top">
+  <header class="header" id="top">
     <a class="brand" href="#top" aria-label="kuma-code">
-      <span class="brand__mark" aria-hidden="true"></span>
-      <span class="brand__name">kuma-code</span>
-      <span class="brand__tag">Web / iOS</span>
+      <span class="dot"></span>
+      <span class="name">kuma-code</span>
+      <span class="chip">Web / iOS</span>
     </a>
 
     <nav class="nav" aria-label="Primary">
-      <a href="#services">Services</a>
-      <a href="#strength">Strength</a>
-      <a href="#flow">Flow</a>
-      <a href="#pricing">Pricing</a>
-      <a href="#contact" class="btn btn--sm btn--ghost">Contact</a>
+      <a class="nav__link" href="#services">Services</a>
+      <a class="nav__link" href="#strength">Strength</a>
+      <a class="nav__link" href="#flow">Flow</a>
+      <a class="nav__link" href="#pricing">Pricing</a>
+      <a class="nav__cta btn btn--sm btn--ghost magnetic" href="#contact">Contact</a>
     </nav>
 
-    <button class="menu" id="menuBtn" aria-label="メニュー" aria-expanded="false">
+    <button class="burger" id="burger" aria-label="menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
   </header>
 
-  <!-- Mobile Drawer -->
-  <aside class="drawer" id="drawer" aria-hidden="true">
+  <div class="drawer" id="drawer" aria-hidden="true">
     <div class="drawer__panel">
       <div class="drawer__head">
         <div class="drawer__title">Menu</div>
-        <button class="drawer__close" id="menuClose" aria-label="閉じる">×</button>
+        <button class="drawer__close" id="drawerClose" aria-label="close">✕</button>
       </div>
-      <a href="#services" class="drawer__link">Services</a>
-      <a href="#strength" class="drawer__link">Strength</a>
-      <a href="#flow" class="drawer__link">Flow</a>
-      <a href="#pricing" class="drawer__link">Pricing</a>
-      <a href="#contact" class="drawer__link drawer__link--cta">Contact</a>
-      <div class="drawer__foot">
-        <div class="chip">High-Quality Motion</div>
-        <div class="chip">Gaming Aesthetic</div>
+      <a class="drawer__link" href="#services">Services</a>
+      <a class="drawer__link" href="#strength">Strength</a>
+      <a class="drawer__link" href="#flow">Flow</a>
+      <a class="drawer__link" href="#pricing">Pricing</a>
+      <div class="drawer__cta">
+        <a class="btn btn--primary magnetic" href="#contact">相談する</a>
       </div>
+      <div class="drawer__hint">@kumamaru_ios_app</div>
     </div>
-  </aside>
+    <div class="drawer__backdrop" id="drawerBackdrop"></div>
+  </div>
 
   <main>
-    <!-- Hero -->
-    <section class="hero" aria-label="Hero">
-      <div class="hero__grid">
-        <div class="hero__copy">
-          <div class="kicker reveal">ゲームみたいに“体験”で差をつける。</div>
-          <h1 class="reveal">
-            <span class="grad">ホームページ制作</span> と <span class="grad2">iOS開発</span>。
-            <span class="sub">カッコよく、速く、刺さる。</span>
-          </h1>
-          <p class="lead reveal">
-            見た目だけじゃ終わらせない。UI/演出・設計・運用まで一気通貫。
-            “ゲーミング×シネマティック”な世界観で、記憶に残るプロダクトへ。
-          </p>
-
-          <div class="hero__cta reveal">
-            <a class="btn btn--lg btn--primary" href="#contact">
-              <span>相談する</span>
-              <span class="btn__glow" aria-hidden="true"></span>
-            </a>
-            <a class="btn btn--lg btn--ghost" href="#services">サービスを見る</a>
-          </div>
-
-          <div class="hero__meta reveal">
-            <div class="stat">
-              <div class="stat__n">Web</div>
-              <div class="stat__t">LP / コーポレート / ポートフォリオ</div>
-            </div>
-            <div class="stat">
-              <div class="stat__n">iOS</div>
-              <div class="stat__t">SwiftUI / アニメ演出 / 体験設計</div>
-            </div>
-            <div class="stat">
-              <div class="stat__n">Motion</div>
-              <div class="stat__t">軽量・高品質の演出</div>
-            </div>
-          </div>
+    <section class="hero container">
+      <div class="hero__left">
+        <div class="badge reveal">
+          <span class="badge__glow"></span>
+          ゲームみたいに“体験”で差をつける。
         </div>
 
-        <div class="hero__card tilt reveal" data-tilt>
-          <div class="card">
-            <div class="card__top">
-              <div class="badge">HIGH QUALITY</div>
-              <div class="pulse" aria-hidden="true"></div>
-            </div>
-            <div class="card__body">
-              <div class="hud">
-                <div class="hud__row">
-                  <span class="dot on"></span>
-                  <span class="dot"></span>
-                  <span class="dot"></span>
-                  <span class="hud__label">SYSTEM</span>
-                </div>
-                <div class="hud__bar" aria-hidden="true"></div>
-              </div>
+        <h1 class="hero__title reveal">
+          ホームページ制作 と <span>iOS</span>開発。
+        </h1>
 
-              <div class="device">
-                <div class="device__screen">
-                  <div class="scan" aria-hidden="true"></div>
-                  <div class="mock">
-                    <div class="mock__title">Project Preview</div>
-                    <div class="mock__lines">
-                      <span></span><span></span><span></span><span></span>
-                    </div>
-                    <div class="mock__cards">
-                      <div class="mini"></div>
-                      <div class="mini"></div>
-                      <div class="mini"></div>
-                    </div>
-                    <div class="mock__btns">
-                      <div class="pill"></div>
-                      <div class="pill"></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="device__base"></div>
-              </div>
-            </div>
+        <p class="hero__desc reveal">
+          カッコよく、速く、刺さる。<br/>
+          UI演出・設計・実装まで一気通貫。
+        </p>
 
-            <div class="card__foot">
-              <div class="tag">Design</div>
-              <div class="tag">Engineering</div>
-              <div class="tag">Delivery</div>
-            </div>
+        <div class="hero__actions reveal">
+          <a class="btn btn--primary magnetic" href="#contact">相談する</a>
+          <a class="btn btn--ghost magnetic" href="#services">サービスを見る</a>
+        </div>
+
+        <div class="hero__meta reveal">
+          <div class="meta__item">
+            <div class="meta__k">領域</div>
+            <div class="meta__v">LP / コーポレート / SwiftUI</div>
+          </div>
+          <div class="meta__item">
+            <div class="meta__k">強み</div>
+            <div class="meta__v">演出 × 軽量 × 体験設計</div>
           </div>
         </div>
       </div>
 
-      <a class="scroll" href="#services" aria-label="Scroll">
-        <span class="scroll__text">SCROLL</span>
-        <span class="scroll__line" aria-hidden="true"></span>
-      </a>
-    </section>
-
-    <!-- Services -->
-    <section class="section" id="services" aria-label="Services">
-      <div class="wrap">
-        <div class="section__head">
-          <h2 class="reveal">Services</h2>
-          <p class="reveal">“カッコいい”だけで終わらせない。成果に繋がる設計＋実装。</p>
-        </div>
-
-        <div class="grid2">
-          <article class="panel tilt reveal" data-tilt>
-            <div class="panel__icon">◆</div>
-            <h3>ホームページ制作</h3>
-            <p>
-              世界観の統一、導線の最適化、軽量で高品質なモーション。
-              1ページLP〜コーポレート、ポートフォリオまで。
-            </p>
-            <ul class="list">
-              <li>デザイン〜コーディング（高速納品）</li>
-              <li>レスポンシブ / SEO 基本対応</li>
-              <li>アニメーション・演出（軽量）</li>
-              <li>運用・改善の相談もOK</li>
-            </ul>
-            <div class="panel__cta">
-              <a class="link" href="#contact">Web制作を相談 →</a>
+      <div class="hero__right reveal">
+        <div class="device tilt">
+          <div class="device__top">
+            <div class="device__dots">
+              <span></span><span></span><span></span>
             </div>
-            <div class="panel__shine" aria-hidden="true"></div>
-          </article>
-
-          <article class="panel tilt reveal" data-tilt>
-            <div class="panel__icon">⬡</div>
-            <h3>iOSアプリ開発</h3>
-            <p>
-              SwiftUIを中心に、気持ちいい操作感と演出。
-              “使って楽しい”UI/UXを重視したアプリ制作。
-            </p>
-            <ul class="list">
-              <li>SwiftUI / 画面遷移 / 状態管理</li>
-              <li>アニメーション・演出（リッチ）</li>
-              <li>プロトタイプ→改善サイクル</li>
-              <li>App Storeリリースの導線作り</li>
-            </ul>
-            <div class="panel__cta">
-              <a class="link" href="#contact">iOS開発を相談 →</a>
+            <div class="device__label">Preview</div>
+            <div class="device__ping">
+              <span class="ping"></span><span class="ping ping--2"></span>
             </div>
-            <div class="panel__shine" aria-hidden="true"></div>
-          </article>
-        </div>
-
-        <div class="marquee reveal" aria-hidden="true">
-          <div class="marquee__track">
-            <span>GAMING AESTHETIC</span><span>HIGH-END MOTION</span><span>FAST DELIVERY</span><span>DESIGN × ENGINEERING</span>
-            <span>GAMING AESTHETIC</span><span>HIGH-END MOTION</span><span>FAST DELIVERY</span><span>DESIGN × ENGINEERING</span>
           </div>
+
+          <div class="device__screen">
+            <img src="assets/hero-visual.svg" alt="Neon UI preview" class="device__img"/>
+            <div class="device__hud">
+              <div class="hud__line"></div>
+              <div class="hud__line"></div>
+              <div class="hud__line"></div>
+            </div>
+          </div>
+
+          <div class="device__footer">
+            <div class="pill">UI Motion</div>
+            <div class="pill pill--alt">Fast Build</div>
+            <div class="pill">Clean Code</div>
+          </div>
+        </div>
+
+        <div class="floaters" aria-hidden="true">
+          <div class="floater f1"></div>
+          <div class="floater f2"></div>
+          <div class="floater f3"></div>
         </div>
       </div>
     </section>
 
-    <!-- Strength -->
-    <section class="section" id="strength" aria-label="Strength">
-      <div class="wrap">
-        <div class="section__head">
-          <h2 class="reveal">Strength</h2>
-          <p class="reveal">“見た目・速度・品質”を全部取りに行く設計。</p>
-        </div>
+    <section id="services" class="section container">
+      <div class="section__head">
+        <h2 class="reveal">Services</h2>
+        <p class="section__sub reveal">“見た目だけ”じゃなく、CVまで設計して作る。</p>
+      </div>
 
-        <div class="grid3">
-          <div class="tile reveal">
-            <div class="tile__top">
-              <div class="tile__num">01</div>
-              <div class="tile__title">世界観の作り込み</div>
-            </div>
-            <p>色・光・余白・タイポグラフィで「一目で覚える」雰囲気に寄せる。</p>
+      <div class="grid3">
+        <article class="card reveal tilt">
+          <div class="card__icon">◆</div>
+          <h3>ホームページ制作</h3>
+          <p>LP / コーポレート / ポートフォリオ。世界観×導線で“仕事が来る”形に。</p>
+          <ul class="list">
+            <li>デザイン / 実装 / 公開まで</li>
+            <li>アニメーション・演出</li>
+            <li>運用しやすい構成</li>
+          </ul>
+        </article>
+
+        <article class="card reveal tilt">
+          <div class="card__icon">▣</div>
+          <h3>iOS開発</h3>
+          <p>SwiftUIで気持ちいいUI。見せ方・動き・触り心地にこだわる。</p>
+          <ul class="list">
+            <li>SwiftUI / アニメーション</li>
+            <li>演出・状態遷移設計</li>
+            <li>プロトタイプ高速</li>
+          </ul>
+        </article>
+
+        <article class="card reveal tilt">
+          <div class="card__icon">✦</div>
+          <h3>Motion / UI演出</h3>
+          <p>派手だけど軽い。ゲーミング感を“品良く”盛る。</p>
+          <ul class="list">
+            <li>スクロール演出</li>
+            <li>3Dチルト / グロー</li>
+            <li>軽量最適化</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="strength" class="section container">
+      <div class="section__head">
+        <h2 class="reveal">Strength</h2>
+        <p class="section__sub reveal">“速さ”と“体験の質”の両立。</p>
+      </div>
+
+      <div class="grid2">
+        <div class="panel reveal">
+          <div class="panel__k">01</div>
+          <div class="panel__t">世界観を崩さない設計</div>
+          <div class="panel__d">色・余白・動きに一貫性。ブランドの雰囲気を作る。</div>
+        </div>
+        <div class="panel reveal">
+          <div class="panel__k">02</div>
+          <div class="panel__t">軽量＆高品質</div>
+          <div class="panel__d">過剰に重くしない。体感を最優先で最適化。</div>
+        </div>
+        <div class="panel reveal">
+          <div class="panel__k">03</div>
+          <div class="panel__t">一気通貫</div>
+          <div class="panel__d">デザイン→実装→公開まで。途中で破綻しない。</div>
+        </div>
+        <div class="panel reveal">
+          <div class="panel__k">04</div>
+          <div class="panel__t">“伝わる”導線</div>
+          <div class="panel__d">サービス・強み・連絡先まで迷わない導線にする。</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="flow" class="section container">
+      <div class="section__head">
+        <h2 class="reveal">Flow</h2>
+        <p class="section__sub reveal">DMでサクッと → すぐ作る。</p>
+      </div>
+
+      <div class="timeline">
+        <div class="step reveal">
+          <div class="step__n">1</div>
+          <div class="step__b">
+            <div class="step__t">DMで相談</div>
+            <div class="step__d">インスタ/スレッズで要件を軽くヒアリング。</div>
           </div>
-          <div class="tile reveal">
-            <div class="tile__top">
-              <div class="tile__num">02</div>
-              <div class="tile__title">軽量ハイクオリティ</div>
-            </div>
-            <p>演出はリッチに、動作は軽く。体感速度を落とさない作り。</p>
+        </div>
+        <div class="step reveal">
+          <div class="step__n">2</div>
+          <div class="step__b">
+            <div class="step__t">方向性決定</div>
+            <div class="step__d">雰囲気・構成・ゴールをすり合わせ。</div>
           </div>
-          <div class="tile reveal">
-            <div class="tile__top">
-              <div class="tile__num">03</div>
-              <div class="tile__title">提案→実装が速い</div>
-            </div>
-            <p>最小で形にしてから改善。スピードと品質の両立を狙う。</p>
+        </div>
+        <div class="step reveal">
+          <div class="step__n">3</div>
+          <div class="step__b">
+            <div class="step__t">制作 / 実装</div>
+            <div class="step__d">演出込みで一気に形にする。</div>
           </div>
-          <div class="tile reveal">
-            <div class="tile__top">
-              <div class="tile__num">04</div>
-              <div class="tile__title">UI/UXの芯がある</div>
-            </div>
-            <p>気持ちよさ・分かりやすさ・迷わなさ。体験設計から作る。</p>
-          </div>
-          <div class="tile reveal">
-            <div class="tile__top">
-              <div class="tile__num">05</div>
-              <div class="tile__title">運用まで見据える</div>
-            </div>
-            <p>公開して終わりじゃない。更新しやすさ・改善導線も設計。</p>
-          </div>
-          <div class="tile reveal">
-            <div class="tile__top">
-              <div class="tile__num">06</div>
-              <div class="tile__title">信頼のコミュニケーション</div>
-            </div>
-            <p>要件整理→見積→制作→納品まで、ズレを減らす進め方。</p>
+        </div>
+        <div class="step reveal">
+          <div class="step__n">4</div>
+          <div class="step__b">
+            <div class="step__t">公開 / 運用</div>
+            <div class="step__d">GitHub Pages 等、最短で公開。</div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Flow -->
-    <section class="section" id="flow" aria-label="Flow">
-      <div class="wrap">
-        <div class="section__head">
-          <h2 class="reveal">Flow</h2>
-          <p class="reveal">最短で完成、でも雑にしない。段取りで勝つ。</p>
-        </div>
+    <section id="pricing" class="section container">
+      <div class="section__head">
+        <h2 class="reveal">Pricing</h2>
+        <p class="section__sub reveal">まずは目安。内容で変動する。</p>
+      </div>
 
-        <div class="steps">
-          <div class="step reveal">
-            <div class="step__n">1</div>
-            <div class="step__c">
-              <div class="step__t">ヒアリング</div>
-              <div class="step__d">目的、ターゲット、必要なページ/機能を整理。</div>
-            </div>
-          </div>
-          <div class="step reveal">
-            <div class="step__n">2</div>
-            <div class="step__c">
-              <div class="step__t">方向性デザイン</div>
-              <div class="step__d">世界観・色・雰囲気・演出レベルを決定。</div>
-            </div>
-          </div>
-          <div class="step reveal">
-            <div class="step__n">3</div>
-            <div class="step__c">
-              <div class="step__t">実装</div>
-              <div class="step__d">高速で形に→触りながらブラッシュアップ。</div>
-            </div>
-          </div>
-          <div class="step reveal">
-            <div class="step__n">4</div>
-            <div class="step__c">
-              <div class="step__t">公開/納品</div>
-              <div class="step__d">デプロイ、導線チェック、運用の相談まで。</div>
-            </div>
-          </div>
-        </div>
+      <div class="grid3">
+        <article class="price reveal tilt">
+          <div class="price__t">LP</div>
+          <div class="price__v">¥xx,xxx〜</div>
+          <div class="price__d">1ページ / 演出込み / 公開まで</div>
+        </article>
+        <article class="price reveal tilt">
+          <div class="price__t">サイト</div>
+          <div class="price__v">¥xxx,xxx〜</div>
+          <div class="price__d">複数ページ / 構成設計 / 運用考慮</div>
+        </article>
+        <article class="price reveal tilt">
+          <div class="price__t">iOS</div>
+          <div class="price__v">相談</div>
+          <div class="price__d">UI/演出/プロトタイプなど</div>
+        </article>
       </div>
     </section>
 
-    <!-- Pricing -->
-    <section class="section" id="pricing" aria-label="Pricing">
-      <div class="wrap">
-        <div class="section__head">
-          <h2 class="reveal">Pricing</h2>
-          <p class="reveal">目安。内容と演出レベルで調整する。</p>
+    <section id="contact" class="section container contact">
+      <div class="contact__box reveal">
+        <h2>Contact</h2>
+        <p>SNSのDMでOK。<span class="handle">@kumamaru_ios_app</span></p>
+        <div class="contact__actions">
+          <a class="btn btn--primary magnetic" target="_blank" rel="noreferrer"
+             href="https://www.instagram.com/kumamaru_ios_app/">Instagram DM</a>
+          <a class="btn btn--ghost magnetic" target="_blank" rel="noreferrer"
+             href="https://www.threads.net/@kumamaru_ios_app">Threads DM</a>
         </div>
-
-        <div class="grid3">
-          <div class="price reveal">
-            <div class="price__top">
-              <div class="price__name">Landing Page</div>
-              <div class="price__yen">¥</div>
-              <div class="price__val">80,000〜</div>
-            </div>
-            <ul class="list">
-              <li>1ページ構成</li>
-              <li>スマホ最適化</li>
-              <li>軽量モーション</li>
-            </ul>
-            <div class="price__note">※文章/構成案があると最速</div>
-          </div>
-
-          <div class="price price--hot reveal">
-            <div class="price__top">
-              <div class="price__name">Corporate</div>
-              <div class="price__yen">¥</div>
-              <div class="price__val">150,000〜</div>
-            </div>
-            <ul class="list">
-              <li>複数ページ</li>
-              <li>デザイン統一</li>
-              <li>演出リッチ</li>
-            </ul>
-            <div class="price__note">※要件整理から一緒にOK</div>
-          </div>
-
-          <div class="price reveal">
-            <div class="price__top">
-              <div class="price__name">iOS Prototype</div>
-              <div class="price__yen">¥</div>
-              <div class="price__val">200,000〜</div>
-            </div>
-            <ul class="list">
-              <li>SwiftUI 画面</li>
-              <li>状態管理</li>
-              <li>演出/アニメ</li>
-            </ul>
-            <div class="price__note">※方向性を早く固めたい人向け</div>
-          </div>
-        </div>
-
-        <div class="note reveal">
-          <div class="note__icon">※</div>
-          <div class="note__text">
-            価格は目安。演出の密度・ページ数・文章/素材の有無で変動。
-            まずは相談して、最小構成から組むのもOK。
-          </div>
-        </div>
+        <div class="contact__note">※ 返信が早いのはインスタが多め</div>
       </div>
     </section>
-
-    <!-- Contact -->
-    <section class="section" id="contact" aria-label="Contact">
-      <div class="wrap">
-        <div class="contact">
-          <div class="contact__copy">
-            <h2 class="reveal">Contact</h2>
-            <p class="reveal">最短で返す。ざっくりでもいいから投げて。</p>
-
-            <div class="contact__cards">
-              <div class="contactCard reveal">
-                <div class="contactCard__t">相談内容例</div>
-                <ul class="list">
-                  <li>LPをかっこよく作りたい</li>
-                  <li>iOSアプリのプロトを作りたい</li>
-                  <li>既存サイトの改修/演出強化</li>
-                </ul>
-              </div>
-              <div class="contactCard reveal">
-                <div class="contactCard__t">返信を早くするコツ</div>
-                <ul class="list">
-                  <li>目的（集客/採用/販売など）</li>
-                  <li>希望の雰囲気（参考URLでも）</li>
-                  <li>納期感（ざっくりでOK）</li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="contact__actions reveal">
-              <a class="btn btn--lg btn--primary" href="mailto:hello@example.com?subject=制作相談&body=【相談内容】%0D%0A%0D%0A【希望の雰囲気】%0D%0A%0D%0A【納期】%0D%0A">
-                <span>メールで相談</span>
-                <span class="btn__glow" aria-hidden="true"></span>
-              </a>
-              <div class="miniNote">※メールアドレスは index.html の mailto を差し替えればOK</div>
-            </div>
-          </div>
-
-          <div class="contact__panel tilt reveal" data-tilt>
-            <div class="formFrame">
-              <div class="formFrame__head">
-                <div class="formFrame__dots"><span></span><span></span><span></span></div>
-                <div class="formFrame__title">Quick Message (local)</div>
-              </div>
-
-              <form class="form" id="quickForm">
-                <label>
-                  <span>お名前</span>
-                  <input name="name" placeholder="はるき" autocomplete="name" />
-                </label>
-                <label>
-                  <span>相談内容</span>
-                  <textarea name="message" placeholder="LP制作 / iOSプロト / 既存改修…" rows="5"></textarea>
-                </label>
-                <button class="btn btn--primary" type="submit">
-                  <span>下書きを作る</span>
-                  <span class="btn__glow" aria-hidden="true"></span>
-                </button>
-
-                <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true">
-                  <div class="toast__title">Draft Copied</div>
-                  <div class="toast__body">メールの下書きをクリップボードにコピーした。</div>
-                </div>
-              </form>
-
-              <div class="formFrame__foot">
-                <div class="chip">No backend</div>
-                <div class="chip">Copy to clipboard</div>
-                <div class="chip">Fast</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <footer class="footer">
-      <div class="wrap footer__row">
-        <div class="footer__left">
-          <div class="brand brand--footer">
-            <span class="brand__mark" aria-hidden="true"></span>
-            <span class="brand__name">kuma-code</span>
-          </div>
-          <div class="footer__muted">© <span id="year"></span> kuma-code. All rights reserved.</div>
-        </div>
-        <div class="footer__right">
-          <a class="link" href="#top">Back to top ↑</a>
-        </div>
-      </div>
-    </footer>
   </main>
 
-  <script src="main.js" defer></script>
+  <footer class="footer">
+    <div class="footer__inner container">
+      <div class="foot__left">
+        <div class="foot__brand">kuma-code</div>
+        <div class="foot__sub">Web制作 / iOS開発</div>
+      </div>
+      <div class="foot__right">
+        <a target="_blank" rel="noreferrer" href="https://www.instagram.com/kumamaru_ios_app/">Instagram</a>
+        <a target="_blank" rel="noreferrer" href="https://www.threads.net/@kumamaru_ios_app">Threads</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
 </body>
 </html>
