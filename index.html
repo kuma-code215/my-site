@@ -2,384 +2,165 @@
 <html lang="ja">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>kuma-code | Web制作 / iOS開発</title>
-  <meta name="description" content="ホームページ制作 / iOS開発。カッコよく、速く、刺さる。UI演出・設計・実装まで一気通貫。" />
-  <meta name="theme-color" content="#05060a" />
-  <link rel="preconnect" href="https://www.instagram.com" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>くまポップラボ | アプリと制作サービス</title>
+  <meta
+    name="description"
+    content="ポップで使いやすいアプリをお届け。リリースアプリ、貧乏ライフハックSNS、ホームページ制作・アプリ開発の事業案内を掲載。"
+  />
+  <meta name="theme-color" content="#ffdcb8" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&amp;family=Zen+Maru+Gothic:wght@400;500;700;900&amp;display=swap"
+    rel="stylesheet"
+  />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <div class="bg" aria-hidden="true">
-    <canvas id="fx"></canvas>
-    <div class="vignette"></div>
-    <div class="scan"></div>
-    <div class="grain"></div>
+    <span class="blob blob--a"></span>
+    <span class="blob blob--b"></span>
+    <span class="blob blob--c"></span>
   </div>
 
-  <header class="header" id="top">
-    <a class="brand" href="#top" aria-label="kuma-code">
-      <span class="dot"></span>
-      <span class="name">kuma-code</span>
-      <span class="chip">Web / iOS</span>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="くまポップラボのトップへ">
+      <span class="brand__icon">🐻</span>
+      <span class="brand__name">くまポップラボ</span>
     </a>
-
-    <nav class="nav" aria-label="Primary">
-      <a class="nav__link" href="#services">Services</a>
-      <a class="nav__link" href="#strength">Strength</a>
-      <a class="nav__link" href="#flow">Flow</a>
-      <a class="nav__link" href="#pricing">Pricing</a>
-      <a class="nav__cta btn btn--sm btn--ghost magnetic" href="#contact">Contact</a>
-    </nav>
-
-    <button class="burger" id="burger" aria-label="menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
+    <a class="header-cta" href="#apps">リリースアプリを見る</a>
   </header>
 
-  <div class="drawer" id="drawer" aria-hidden="true">
-    <div class="drawer__panel">
-      <div class="drawer__head">
-        <div class="drawer__title">Menu</div>
-        <button class="drawer__close" id="drawerClose" aria-label="close">✕</button>
-      </div>
-      <a class="drawer__link" href="#services">Services</a>
-      <a class="drawer__link" href="#strength">Strength</a>
-      <a class="drawer__link" href="#flow">Flow</a>
-      <a class="drawer__link" href="#pricing">Pricing</a>
-      <div class="drawer__cta">
-        <a class="btn btn--primary magnetic" href="#contact">相談する</a>
-      </div>
-      <div class="drawer__hint">@kumamaru_ios_app</div>
-    </div>
-    <div class="drawer__backdrop" id="drawerBackdrop"></div>
-  </div>
-
-  <main>
-    <section class="hero container">
-      <div class="hero__left">
-        <div class="badge reveal">
-          <span class="badge__glow"></span>
-          ゲームみたいに“体験”で差をつける。
-        </div>
-
-        <h1 class="hero__title reveal">
-          ホームページ制作 と <span>iOS</span>開発。
-        </h1>
-
-        <p class="hero__desc reveal">
-          カッコよく、速く、刺さる。<br/>
-          UI演出・設計・実装まで一気通貫。
+  <main id="top" class="page">
+    <section class="hero section reveal">
+      <div class="hero__copy">
+        <p class="eyebrow">毎日をやさしく、ちょっと楽しく。</p>
+        <h1 class="hero__title">ポップで使いやすい<br />アプリを届けます</h1>
+        <p class="hero__lead">
+          かわいさと使いやすさを両立したアプリづくり。<br />
+          リリース情報、ライフハック発信、制作事業までまとめてチェックできます。
         </p>
-
-        <div class="hero__actions reveal">
-          <a class="btn btn--primary magnetic" href="#contact">相談する</a>
-          <a class="btn btn--ghost magnetic" href="#services">サービスを見る</a>
-        </div>
-
-        <div class="hero__meta reveal">
-          <div class="meta__item">
-            <div class="meta__k">領域</div>
-            <div class="meta__v">LP / コーポレート / SwiftUI</div>
-          </div>
-          <div class="meta__item">
-            <div class="meta__k">強み</div>
-            <div class="meta__v">演出 × 軽量 × 体験設計</div>
-          </div>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="#apps">アプリ一覧へ</a>
+          <a class="btn btn--ghost" href="#lifehack-sns">ライフハックSNSへ</a>
         </div>
       </div>
 
-      <div class="hero__right reveal">
-        <div class="device">
-          <div class="device__top">
-            <div class="device__dots">
-              <span></span><span></span><span></span>
-            </div>
-            <div class="device__label">Preview</div>
-            <div class="device__ping">
-              <span class="ping"></span><span class="ping ping--2"></span>
-            </div>
-          </div>
-
-          <div class="device__screen">
-            <div class="preview">
-              <div class="preview__row">
-                <div class="tag">HIGH QUALITY</div>
-                <div class="status"><span class="s-dot"></span>LIVE</div>
-              </div>
-
-              <div class="preview__bar">
-                <span class="bar a"></span>
-                <span class="bar b"></span>
-                <span class="bar c"></span>
-              </div>
-
-              <div class="preview__grid">
-                <div class="mini mini--1"></div>
-                <div class="mini mini--2"></div>
-                <div class="mini mini--3"></div>
-              </div>
-
-              <div class="preview__code" aria-hidden="true">
-                <div class="ln w80"></div>
-                <div class="ln w68"></div>
-                <div class="ln w92"></div>
-                <div class="ln w55"></div>
-                <div class="ln w76"></div>
-                <div class="ln w88"></div>
-              </div>
-
-              <div class="preview__shot">
-                <img src="assets/hero-visual.svg" alt="Neon UI preview" class="device__img"/>
-                <div class="shine"></div>
-              </div>
-            </div>
-          </div>
-
-          <div class="device__footer">
-            <div class="pill">UI Motion</div>
-            <div class="pill pill--alt">Fast Build</div>
-            <div class="pill">Clean Code</div>
-          </div>
-        </div>
-
-        <div class="floaters" aria-hidden="true">
-          <div class="floater f1"></div>
-          <div class="floater f2"></div>
-          <div class="floater f3"></div>
-        </div>
-      </div>
+      <figure class="hero__figure">
+        <img
+          id="heroBear"
+          class="hero__bear"
+          src="assets/bear-main.png"
+          data-fallback="assets/hero-visual.svg"
+          alt="サイトのメインビジュアル"
+        />
+        <figcaption>※ <code>assets/bear-main.png</code> に差し替えると、この世界観がそのまま反映されます。</figcaption>
+      </figure>
     </section>
 
-    <section id="services" class="section container">
-      <div class="section__head">
-        <h2 class="reveal">Services</h2>
-        <p class="section__sub reveal">“見た目だけ”じゃなく、CVまで設計して作る。</p>
+    <section id="apps" class="section reveal">
+      <div class="section-heading">
+        <p class="section-heading__label">Priority 1</p>
+        <h2>リリースアプリ</h2>
+        <p>
+          新着順で表示。今後アプリが増えても、<code>main.js</code> のデータ配列に1件追加するだけで反映されます。
+        </p>
+      </div>
+      <div id="app-list" class="app-grid" aria-live="polite"></div>
+    </section>
+
+    <section id="lifehack-sns" class="section reveal">
+      <div class="section-heading">
+        <p class="section-heading__label">Priority 2</p>
+        <h2>貧乏ライフハックSNS</h2>
+        <p>生活コストを下げるコツを、短くわかりやすく投稿しています。</p>
       </div>
 
-      <div class="grid3">
-        <article class="card reveal hover-glow">
-          <div class="card__icon">◆</div>
+      <article class="promo-card">
+        <div class="promo-card__body">
+          <h3>0円・低コスト生活テクを発信中</h3>
+          <p>
+            食費、固定費、日用品の工夫などを「すぐ試せる形」で紹介。
+            まずはSNSをフォローして、最新の節約ネタを受け取ってください。
+          </p>
+        </div>
+        <div class="promo-card__actions">
+          <a class="btn btn--primary" target="_blank" rel="noreferrer" href="https://www.instagram.com/">
+            Instagram
+          </a>
+          <a class="btn btn--ghost" target="_blank" rel="noreferrer" href="https://www.threads.net/">
+            Threads
+          </a>
+        </div>
+      </article>
+    </section>
+
+    <section id="business" class="section reveal">
+      <div class="section-heading">
+        <p class="section-heading__label">Priority 3</p>
+        <h2>ホームページ制作・アプリ開発事業</h2>
+        <p>やさしい見た目と成果導線を両立した制作を行っています。</p>
+      </div>
+
+      <div class="service-grid">
+        <article class="service-card">
           <h3>ホームページ制作</h3>
-          <p>LP / コーポレート / ポートフォリオ。世界観×導線で“仕事が来る”形に。</p>
-          <ul class="list">
-            <li>デザイン / 実装 / 公開まで</li>
-            <li>アニメーション・演出</li>
-            <li>運用しやすい構成</li>
+          <p>LP / コーポレート / ポートフォリオ。スマホ優先で成果につながる導線設計。</p>
+          <ul>
+            <li>デザイン設計</li>
+            <li>実装・公開</li>
+            <li>更新しやすい構成</li>
           </ul>
         </article>
-
-        <article class="card reveal hover-glow">
-          <div class="card__icon">▣</div>
-          <h3>iOS開発</h3>
-          <p>SwiftUIで気持ちいいUI。見せ方・動き・触り心地にこだわる。</p>
-          <ul class="list">
-            <li>SwiftUI / アニメーション</li>
-            <li>演出・状態遷移設計</li>
-            <li>プロトタイプ高速</li>
-          </ul>
-        </article>
-
-        <article class="card reveal hover-glow">
-          <div class="card__icon">✦</div>
-          <h3>Motion / UI演出</h3>
-          <p>派手だけど軽い。ゲーミング感を“品良く”盛る。</p>
-          <ul class="list">
-            <li>スクロール演出</li>
-            <li>3Dチルト / グロー</li>
-            <li>軽量最適化</li>
+        <article class="service-card">
+          <h3>アプリ開発</h3>
+          <p>企画からUI設計、実装まで。ポップで親しみやすい体験を大事に開発します。</p>
+          <ul>
+            <li>UI/UX設計</li>
+            <li>プロトタイプ開発</li>
+            <li>運用改善サポート</li>
           </ul>
         </article>
       </div>
-    
-    <section class="section container">
-      <div class="section__head">
-        <h2 class="reveal">What you get</h2>
-        <p class="section__sub reveal">“見た目” + “成果” + “運用しやすさ” までセット。</p>
-      </div>
-
-      <div class="grid3">
-        <div class="panel reveal">
-          <div class="panel__k">Design</div>
-          <div class="panel__t">世界観を統一</div>
-          <div class="panel__d">配色・余白・タイポ・動き。全部を一本のトーンにまとめる。</div>
-        </div>
-        <div class="panel reveal">
-          <div class="panel__k">UX</div>
-          <div class="panel__t">迷わない導線</div>
-          <div class="panel__d">見せたい順に配置。問い合わせまで“最短で気持ちいい”。</div>
-        </div>
-        <div class="panel reveal">
-          <div class="panel__k">Speed</div>
-          <div class="panel__t">高速で形にする</div>
-          <div class="panel__d">まず動くものを作って、そこから磨き上げていく。</div>
-        </div>
-      </div>
-
-      <div class="badges reveal" aria-label="stack">
-        <span>SwiftUI</span><span>Animation</span><span>GitHub Pages</span><span>LP</span><span>Corporate</span><span>Motion UI</span>
-      </div>
     </section>
 
-    <section class="section container cta-strip">
-      <div class="cta reveal">
-        <div class="cta__l">
-          <div class="cta__t">最短で“カッコいい”を作る。まずDMでOK。</div>
-          <div class="cta__d">相談→方向性→制作までスムーズに進める。</div>
-        </div>
-        <div class="cta__r">
-          <a class="btn btn--primary magnetic" target="_blank" rel="noreferrer"
-             href="https://www.instagram.com/kumamaru_ios_app/">Instagram DM</a>
-          <a class="btn btn--ghost magnetic" target="_blank" rel="noreferrer"
-             href="https://www.threads.net/@kumamaru_ios_app">Threads DM</a>
-        </div>
-      </div>
-    </section>
-
-</section>
-
-    <section id="strength" class="section container">
-      <div class="section__head">
-        <h2 class="reveal">Strength</h2>
-        <p class="section__sub reveal">“速さ”と“体験の質”の両立。</p>
+    <section id="appdev-sns" class="section reveal">
+      <div class="section-heading">
+        <p class="section-heading__label">Priority 4</p>
+        <h2>アプリ開発SNSアカウント</h2>
+        <p>開発ログ、アップデート情報、新作アプリ告知を発信しています。</p>
       </div>
 
-      <div class="grid2">
-        <div class="panel reveal">
-          <div class="panel__k">01</div>
-          <div class="panel__t">世界観を崩さない設計</div>
-          <div class="panel__d">色・余白・動きに一貫性。ブランドの雰囲気を作る。</div>
+      <article class="promo-card promo-card--soft">
+        <div class="promo-card__body">
+          <h3>@kumamaru_ios_app</h3>
+          <p>新作アプリの進捗やリリース情報を最速で受け取りたい方向けのアカウントです。</p>
         </div>
-        <div class="panel reveal">
-          <div class="panel__k">02</div>
-          <div class="panel__t">軽量＆高品質</div>
-          <div class="panel__d">過剰に重くしない。体感を最優先で最適化。</div>
+        <div class="promo-card__actions">
+          <a
+            class="btn btn--primary"
+            target="_blank"
+            rel="noreferrer"
+            href="https://www.instagram.com/kumamaru_ios_app/"
+          >
+            Instagramで見る
+          </a>
+          <a
+            class="btn btn--ghost"
+            target="_blank"
+            rel="noreferrer"
+            href="https://www.threads.net/@kumamaru_ios_app"
+          >
+            Threadsで見る
+          </a>
         </div>
-        <div class="panel reveal">
-          <div class="panel__k">03</div>
-          <div class="panel__t">一気通貫</div>
-          <div class="panel__d">デザイン→実装→公開まで。途中で破綻しない。</div>
-        </div>
-        <div class="panel reveal">
-          <div class="panel__k">04</div>
-          <div class="panel__t">“伝わる”導線</div>
-          <div class="panel__d">サービス・強み・連絡先まで迷わない導線にする。</div>
-        </div>
-      </div>
-    </section>
-
-    <section id="flow" class="section container">
-      <div class="section__head">
-        <h2 class="reveal">Flow</h2>
-        <p class="section__sub reveal">DMでサクッと → すぐ作る。</p>
-      </div>
-
-      <div class="timeline">
-        <div class="step reveal">
-          <div class="step__n">1</div>
-          <div class="step__b">
-            <div class="step__t">DMで相談</div>
-            <div class="step__d">インスタ/スレッズで要件を軽くヒアリング。</div>
-          </div>
-        </div>
-        <div class="step reveal">
-          <div class="step__n">2</div>
-          <div class="step__b">
-            <div class="step__t">方向性決定</div>
-            <div class="step__d">雰囲気・構成・ゴールをすり合わせ。</div>
-          </div>
-        </div>
-        <div class="step reveal">
-          <div class="step__n">3</div>
-          <div class="step__b">
-            <div class="step__t">制作 / 実装</div>
-            <div class="step__d">演出込みで一気に形にする。</div>
-          </div>
-        </div>
-        <div class="step reveal">
-          <div class="step__n">4</div>
-          <div class="step__b">
-            <div class="step__t">公開 / 運用</div>
-            <div class="step__d">GitHub Pages 等、最短で公開。</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="pricing" class="section container">
-      <div class="section__head">
-        <h2 class="reveal">Pricing</h2>
-        <p class="section__sub reveal">まずは目安。内容で変動する。</p>
-      </div>
-
-      <div class="grid3">
-        <article class="price reveal hover-glow">
-          <div class="price__t">LP</div>
-          <div class="price__v">¥xx,xxx〜</div>
-          <div class="price__d">1ページ / 演出込み / 公開まで</div>
-        </article>
-        <article class="price reveal hover-glow">
-          <div class="price__t">サイト</div>
-          <div class="price__v">¥xxx,xxx〜</div>
-          <div class="price__d">複数ページ / 構成設計 / 運用考慮</div>
-        </article>
-        <article class="price reveal hover-glow">
-          <div class="price__t">iOS</div>
-          <div class="price__v">相談</div>
-          <div class="price__d">UI/演出/プロトタイプなど</div>
-        </article>
-      </div>
-    </section>
-
-    
-    <section class="section container">
-      <div class="section__head">
-        <h2 class="reveal">FAQ</h2>
-        <p class="section__sub reveal">よくある質問だけ先に。</p>
-      </div>
-
-      <div class="faq">
-        <details class="faq__item reveal">
-          <summary>費用感はどれくらい？</summary>
-          <div class="faq__a">上のPricingは目安。内容・ページ数・演出量で調整。まずDMでざっくり聞いてOK。</div>
-        </details>
-        <details class="faq__item reveal">
-          <summary>素材（文章/画像）が無くても作れる？</summary>
-          <div class="faq__a">大丈夫。こちらで“仮素材”で先に組んで、あとから差し替える進め方が速い。</div>
-        </details>
-        <details class="faq__item reveal">
-          <summary>GitHub Pagesで公開しても大丈夫？</summary>
-          <div class="faq__a">LPなら相性◎。運用がラクで、更新もすぐ反映できる。</div>
-        </details>
-      </div>
-    </section>
-
-<section id="contact" class="section container contact">
-      <div class="contact__box reveal">
-        <h2>Contact</h2>
-        <p>SNSのDMでOK。<span class="handle">@kumamaru_ios_app</span></p>
-        <div class="contact__actions">
-          <a class="btn btn--primary magnetic" target="_blank" rel="noreferrer"
-             href="https://www.instagram.com/kumamaru_ios_app/">Instagram DM</a>
-          <a class="btn btn--ghost magnetic" target="_blank" rel="noreferrer"
-             href="https://www.threads.net/@kumamaru_ios_app">Threads DM</a>
-        </div>
-        <div class="contact__note">※ 返信が早いのはインスタが多め</div>
-      </div>
+      </article>
     </section>
   </main>
 
-  <footer class="footer">
-    <div class="footer__inner container">
-      <div class="foot__left">
-        <div class="foot__brand">kuma-code</div>
-        <div class="foot__sub">Web制作 / iOS開発</div>
-      </div>
-      <div class="foot__right">
-        <a target="_blank" rel="noreferrer" href="https://www.instagram.com/kumamaru_ios_app/">Instagram</a>
-        <a target="_blank" rel="noreferrer" href="https://www.threads.net/@kumamaru_ios_app">Threads</a>
-      </div>
-    </div>
+  <footer class="site-footer">
+    <small>© <span id="year"></span> くまポップラボ</small>
   </footer>
 
   <script src="main.js"></script>
