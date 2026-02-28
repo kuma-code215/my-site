@@ -21,7 +21,7 @@
       url: "https://example.com/app-02",
       linkLabel: "詳細を見る",
       releaseDate: "2025-11-20",
-      tags: ["貧乏ライフハック", "ルーティン", "可視化"],
+      tags: ["節約", "ルーティン", "可視化"],
       status: "公開中",
       isVisible: true
     },
