@@ -113,7 +113,7 @@
     return `
       <article class="app-card">
         ${hasImage
-          ? `<div class="app-card__visual"><img class="app-card__image" src="${escapeAttribute(imageSrc)}" alt="${escapeAttribute(imageAlt)}" loading="lazy" /></div>`
+          ? `<div class="app-card__visual"><div class="app-card__phone"><div class="app-card__screen"><img class="app-card__image" src="${escapeAttribute(imageSrc)}" alt="${escapeAttribute(imageAlt)}" loading="lazy" /></div></div></div>`
           : ""}
         <div class="app-card__meta">
           <span class="app-card__date">${escapeHtml(dateLabel)}</span>

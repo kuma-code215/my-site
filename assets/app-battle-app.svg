@@ -1,44 +1,57 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1200" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 1980" role="img" aria-labelledby="title desc">
   <title id="title">battle-app preview</title>
-  <desc id="desc">Light blue game dashboard with rank panel, creature slots, and stat cards.</desc>
+  <desc id="desc">An iPhone style game dashboard inspired by the provided battle app screenshot.</desc>
   <defs>
     <linearGradient id="sky" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#c8e4fb"/>
-      <stop offset="100%" stop-color="#e4f1f8"/>
+      <stop offset="0%" stop-color="#cce6fb"/>
+      <stop offset="100%" stop-color="#e5f1f5"/>
     </linearGradient>
     <linearGradient id="panel" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f2f7fb"/>
+      <stop offset="100%" stop-color="#f4f8fb"/>
     </linearGradient>
-    <linearGradient id="button" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#4f7fb2"/>
-      <stop offset="100%" stop-color="#62b0ed"/>
+    <linearGradient id="action" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#406f9d"/>
+      <stop offset="100%" stop-color="#65b7f1"/>
     </linearGradient>
   </defs>
-  <rect width="900" height="1200" rx="44" fill="url(#sky)"/>
-  <circle cx="820" cy="110" r="350" fill="#b8d9f2" fill-opacity=".45"/>
-  <circle cx="-40" cy="910" r="260" fill="#b8d9f2" fill-opacity=".42"/>
-  <rect x="34" y="76" width="832" height="170" rx="42" fill="url(#panel)" stroke="#7a93ad" stroke-width="3"/>
-  <text x="58" y="132" font-family="Arial, sans-serif" font-size="28" font-weight="800" fill="#15224f">MONSTER FRONTIER</text>
-  <rect x="550" y="96" width="190" height="52" rx="26" fill="#ffffff" stroke="#7cb8ed" stroke-width="3"/>
-  <rect x="756" y="96" width="100" height="52" rx="26" fill="#ffffff" stroke="#7cb8ed" stroke-width="3"/>
-  <rect x="56" y="148" width="788" height="78" rx="28" fill="#f8fbfe" stroke="#7cb8ed" stroke-width="3"/>
-  <circle cx="108" cy="187" r="24" fill="url(#button)"/>
-  <rect x="150" y="166" width="270" height="20" rx="10" fill="#15224f"/>
-  <rect x="150" y="194" width="390" height="18" rx="9" fill="#15224f" fill-opacity=".9"/>
-  <rect x="76" y="216" width="662" height="12" rx="6" fill="#7cb8ed"/>
-  <rect x="34" y="314" width="832" height="292" rx="40" fill="#f7fbff" fill-opacity=".7" stroke="#67a8e5" stroke-width="3"/>
-  <circle cx="188" cy="456" r="86" fill="#fdf6de" stroke="#e7cc73" stroke-width="8"/>
-  <path d="M188 364l24 52 56 8-40 38 10 56-50-26-50 26 10-56-40-38 56-8z" fill="#fff4b3"/>
-  <circle cx="450" cy="454" r="84" fill="#eef7ff" stroke="#8abfff" stroke-width="8"/>
-  <path d="M450 372l24 44 48 8-36 36 8 48-44-22-44 22 8-48-36-36 48-8z" fill="#d8ecff"/>
-  <circle cx="710" cy="454" r="82" fill="#dceeff" stroke="#5d8ddb" stroke-width="8"/>
-  <path d="M710 384l26 44 50 8-38 38 10 50-48-24-48 24 10-50-38-38 50-8z" fill="#7ea9ff"/>
-  <rect x="34" y="634" width="832" height="378" rx="44" fill="url(#panel)" stroke="#8a9ab0" stroke-width="3"/>
-  <rect x="62" y="710" width="776" height="80" rx="24" fill="#fdfefe" stroke="#b8d8f4" stroke-width="3"/>
-  <rect x="62" y="810" width="776" height="80" rx="24" fill="#fdfefe" stroke="#b8d8f4" stroke-width="3"/>
-  <rect x="62" y="910" width="776" height="80" rx="24" fill="#fdfefe" stroke="#b8d8f4" stroke-width="3"/>
-  <rect x="34" y="1042" width="270" height="136" rx="26" fill="url(#panel)" stroke="#b8d8f4" stroke-width="3"/>
-  <rect x="318" y="1042" width="264" height="136" rx="26" fill="url(#panel)" stroke="#b8d8f4" stroke-width="3"/>
-  <rect x="596" y="1042" width="270" height="136" rx="26" fill="url(#panel)" stroke="#b8d8f4" stroke-width="3"/>
+  <rect width="960" height="1980" fill="url(#sky)"/>
+  <circle cx="860" cy="150" r="360" fill="#b6d8f1" fill-opacity=".48"/>
+  <circle cx="-20" cy="1160" r="330" fill="#b8d8f1" fill-opacity=".42"/>
+  <text x="78" y="78" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#111111">15:53</text>
+  <rect x="36" y="210" width="888" height="254" rx="46" fill="url(#panel)" stroke="#8494a8" stroke-width="3"/>
+  <text x="58" y="288" font-family="Arial, sans-serif" font-size="32" font-weight="800" fill="#16224c">MONSTER FRONTIER</text>
+  <rect x="594" y="242" width="194" height="58" rx="29" fill="#ffffff" stroke="#7bb8eb" stroke-width="3"/>
+  <rect x="804" y="242" width="96" height="58" rx="29" fill="#ffffff" stroke="#7bb8eb" stroke-width="3"/>
+  <text x="662" y="280" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#16224c">23.2m</text>
+  <text x="844" y="280" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#16224c">8</text>
+  <rect x="58" y="326" width="844" height="108" rx="30" fill="#fbfdff" stroke="#7bb8eb" stroke-width="3"/>
+  <circle cx="112" cy="380" r="28" fill="url(#action)"/>
+  <text x="162" y="370" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#16224c">RANK</text>
+  <text x="162" y="410" font-family="Arial, sans-serif" font-size="48" font-weight="800" fill="#16224c">134,742</text>
+  <rect x="80" y="418" width="672" height="12" rx="6" fill="#74b8ed"/>
+  <rect x="36" y="578" width="888" height="438" rx="44" fill="#f8fcff" fill-opacity=".76" stroke="#69aae5" stroke-width="4"/>
+  <circle cx="190" cy="770" r="104" fill="#fef8e5" stroke="#e6cc75" stroke-width="8"/>
+  <path d="M190 656l30 62 70 12-48 46 12 70-64-34-64 34 12-70-48-46 70-12z" fill="#fff2b5"/>
+  <circle cx="480" cy="770" r="100" fill="#f0f7ff" stroke="#8abfff" stroke-width="8"/>
+  <path d="M480 664l28 54 58 10-40 40 10 58-56-28-56 28 10-58-40-40 58-10z" fill="#dbeeff"/>
+  <circle cx="760" cy="770" r="98" fill="#e1efff" stroke="#5f8fde" stroke-width="8"/>
+  <path d="M760 668l30 52 62 10-44 42 10 62-58-28-58 28 10-62-44-42 62-10z" fill="#82a9ff"/>
+  <rect x="36" y="1060" width="888" height="454" rx="46" fill="url(#panel)" stroke="#8e9cae" stroke-width="3"/>
+  <text x="70" y="1140" font-family="Arial, sans-serif" font-size="34" font-weight="800" fill="#16224c">TODAY</text>
+  <rect x="64" y="1192" width="832" height="84" rx="24" fill="#ffffff" stroke="#b9d8f3" stroke-width="3"/>
+  <rect x="64" y="1300" width="832" height="84" rx="24" fill="#ffffff" stroke="#b9d8f3" stroke-width="3"/>
+  <rect x="64" y="1408" width="832" height="84" rx="24" fill="#ffffff" stroke="#b9d8f3" stroke-width="3"/>
+  <text x="148" y="1244" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#16224c">Daily Capsule</text>
+  <text x="148" y="1352" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#16224c">Daily Quest</text>
+  <text x="148" y="1460" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#16224c">Records</text>
+  <rect x="36" y="1558" width="276" height="162" rx="26" fill="url(#panel)" stroke="#b9d8f3" stroke-width="3"/>
+  <rect x="342" y="1558" width="276" height="162" rx="26" fill="url(#panel)" stroke="#b9d8f3" stroke-width="3"/>
+  <rect x="648" y="1558" width="276" height="162" rx="26" fill="url(#panel)" stroke="#b9d8f3" stroke-width="3"/>
+  <text x="118" y="1660" font-family="Arial, sans-serif" font-size="28" font-weight="800" fill="#16224c">62</text>
+  <text x="440" y="1660" font-family="Arial, sans-serif" font-size="28" font-weight="800" fill="#16224c">6.9m</text>
+  <text x="756" y="1660" font-family="Arial, sans-serif" font-size="28" font-weight="800" fill="#16224c">36</text>
+  <rect x="36" y="1768" width="888" height="170" rx="46" fill="url(#panel)" stroke="#8e9cae" stroke-width="3"/>
+  <circle cx="482" cy="1848" r="48" fill="url(#action)"/>
+  <path d="M468 1820l36 28-36 28z" fill="#ffffff"/>
 </svg>
