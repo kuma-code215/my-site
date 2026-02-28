@@ -30,28 +30,6 @@
       imageAlt: "battle-appのホーム画面イメージ"
     },
     {
-      name: "くまっと家計メモ",
-      catchCopy: "かわいく続ける、ゆる家計管理アプリ",
-      description: "入力を最小限にして、毎日の支出を手早く記録。カテゴリごとの使いすぎも見やすく確認できます。",
-      url: "https://example.com/app-01",
-      linkLabel: "アプリを見る",
-      releaseDate: "2026-02-03",
-      tags: ["家計", "節約", "習慣化"],
-      status: "公開中",
-      isVisible: true
-    },
-    {
-      name: "節約ルーティン",
-      catchCopy: "小さな節約を毎日の習慣に",
-      description: "今日できる節約アクションを提案。達成率や継続日数がひと目でわかるシンプル設計です。",
-      url: "https://example.com/app-02",
-      linkLabel: "詳細を見る",
-      releaseDate: "2025-11-20",
-      tags: ["節約", "ルーティン", "可視化"],
-      status: "公開中",
-      isVisible: true
-    },
-    {
       name: "おたすけ買い物リスト",
       catchCopy: "無駄買いを防ぐメモアプリ",
       description: "買うものを共有して重複購入を防止。特売情報メモで買い忘れや無駄買いを減らせます。",
