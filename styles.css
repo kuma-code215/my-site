@@ -272,6 +272,24 @@ a {
   gap: 10px;
 }
 
+.app-card__visual {
+  margin: -2px -2px 2px;
+  border-radius: calc(var(--radius-lg) - 4px);
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.9), rgba(245, 250, 255, 0.62)),
+    linear-gradient(145deg, rgba(255, 214, 188, 0.44), rgba(182, 227, 255, 0.44));
+}
+
+.app-card__image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  object-position: center top;
+}
+
 .app-card__meta {
   display: flex;
   justify-content: space-between;

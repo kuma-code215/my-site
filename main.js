@@ -4,6 +4,32 @@
   // 追加時はこの配列にオブジェクトを1件追記するだけで表示されます。
   const releasedApps = [
     {
+      name: "2d-ai-chat",
+      catchCopy: "2Dキャラと自然に話せる、やわらか会話アプリ",
+      description: "表情や空気感まで伝わるビジュアルで、キャラクターとの雑談を心地よく続けられるAIチャット体験。気分に合わせて、ゆるく話したい時にも使いやすく整えています。",
+      url: "",
+      linkLabel: "公開リンク準備中",
+      releaseDate: "2026-02-28",
+      tags: ["AIチャット", "2D", "会話体験"],
+      status: "公開中",
+      isVisible: true,
+      imageSrc: "assets/app-2d-ai-chat.svg",
+      imageAlt: "2d-ai-chatの会話画面イメージ"
+    },
+    {
+      name: "battle-app",
+      catchCopy: "モンスター育成の進み具合をひと目で管理",
+      description: "周回状況、到達ランク、日課の進捗をまとめて見渡せるバトル管理アプリ。毎日のプレイで確認したい情報だけを、すぐ読めるレイアウトにまとめています。",
+      url: "",
+      linkLabel: "公開リンク準備中",
+      releaseDate: "2026-02-22",
+      tags: ["育成", "バトル", "進捗管理"],
+      status: "公開中",
+      isVisible: true,
+      imageSrc: "assets/app-battle-app.svg",
+      imageAlt: "battle-appのホーム画面イメージ"
+    },
+    {
       name: "くまっと家計メモ",
       catchCopy: "かわいく続ける、ゆる家計管理アプリ",
       description: "入力を最小限にして、毎日の支出を手早く記録。カテゴリごとの使いすぎも見やすく確認できます。",
@@ -80,9 +106,15 @@
     const url = typeof app.url === "string" ? app.url.trim() : "";
     const hasUrl = url.length > 0;
     const linkLabel = app.linkLabel || "アプリを見る";
+    const imageSrc = typeof app.imageSrc === "string" ? app.imageSrc.trim() : "";
+    const hasImage = imageSrc.length > 0;
+    const imageAlt = app.imageAlt || `${app.name || "アプリ"}のイメージ`;
 
     return `
       <article class="app-card">
+        ${hasImage
+          ? `<div class="app-card__visual"><img class="app-card__image" src="${escapeAttribute(imageSrc)}" alt="${escapeAttribute(imageAlt)}" loading="lazy" /></div>`
+          : ""}
         <div class="app-card__meta">
           <span class="app-card__date">${escapeHtml(dateLabel)}</span>
           <span class="app-card__status">${escapeHtml(app.status || "公開中")}</span>
