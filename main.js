@@ -13,7 +13,7 @@
       tags: ["AIチャット", "2D", "会話体験"],
       status: "公開中",
       isVisible: true,
-      imageSrc: "assets/app-2d-ai-chat.svg",
+      imageSrc: "images/IMG_5760.PNG",
       imageAlt: "2d-ai-chatの会話画面イメージ"
     },
     {
@@ -26,7 +26,7 @@
       tags: ["育成", "バトル", "進捗管理"],
       status: "公開中",
       isVisible: true,
-      imageSrc: "assets/app-battle-app.svg",
+      imageSrc: "images/IMG_5761.PNG",
       imageAlt: "battle-appのホーム画面イメージ"
     },
     {
