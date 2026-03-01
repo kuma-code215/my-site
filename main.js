@@ -4,6 +4,19 @@
   // 追加時はこの配列にオブジェクトを1件追記するだけで表示されます。
   const releasedApps = [
     {
+      name: "KeepProof",
+      catchCopy: "レシートや保証書を画像からまとめて探せる管理アプリ",
+      description: "レシート、保証書、取扱説明書の画像をまとめて取り込み、OCRで必要な情報をすぐ見つけやすくした保管アプリ。あとから店名や金額で探したい時にも、一覧で整理して確認できます。",
+      url: "",
+      linkLabel: "公開リンク準備中",
+      releaseDate: "2026-03-01",
+      tags: ["レシート", "保証書", "OCR管理"],
+      status: "公開中",
+      isVisible: true,
+      imageSrc: "images/IMG_5769.PNG",
+      imageAlt: "KeepProofのホーム画面イメージ"
+    },
+    {
       name: "2d-ai-chat",
       catchCopy: "2Dキャラと自然に話せる、やわらか会話アプリ",
       description: "表情や空気感まで伝わるビジュアルで、キャラクターとの雑談を心地よく続けられるAIチャット体験。気分に合わせて、ゆるく話したい時にも使いやすく整えています。",
