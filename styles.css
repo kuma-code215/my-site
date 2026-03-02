@@ -147,6 +147,15 @@ a {
   margin-top: 18px;
 }
 
+.sub-hero {
+  margin-top: 8px;
+  padding: 18px;
+  border-radius: var(--radius-xl);
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.9), rgba(255, 245, 232, 0.76));
+  border: 1px solid var(--line);
+  box-shadow: 0 14px 28px rgba(173, 99, 56, 0.1);
+}
+
 .hero {
   display: grid;
   gap: 14px;
@@ -182,6 +191,10 @@ a {
 .hero__actions {
   display: grid;
   gap: 10px;
+  margin-top: 18px;
+}
+
+.sub-hero__actions {
   margin-top: 18px;
 }
 
@@ -490,6 +503,10 @@ a {
   border: 1px solid var(--line);
   color: var(--muted);
   font-size: 14px;
+}
+
+.section-actions {
+  margin-top: 14px;
 }
 
 .site-footer {

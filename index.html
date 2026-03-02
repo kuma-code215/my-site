@@ -29,7 +29,7 @@
       <span class="brand__icon">🐻</span>
       <span class="brand__name">くまポップラボ</span>
     </a>
-    <a class="header-cta" href="#apps">リリースアプリを見る</a>
+    <a class="header-cta" href="apps.html">アプリ一覧を見る</a>
   </header>
 
   <main id="top" class="page">
@@ -42,7 +42,8 @@
           リリース情報と制作事業をまとめてチェックできます。
         </p>
         <div class="hero__actions">
-          <a class="btn btn--primary" href="#apps">アプリ一覧へ</a>
+          <a class="btn btn--primary" href="#apps">最新アプリを見る</a>
+          <a class="btn btn--ghost" href="apps.html">アプリ一覧へ</a>
         </div>
       </div>
 
@@ -66,10 +67,11 @@
         <p class="section-heading__label">Priority 1</p>
         <h2>リリースアプリ</h2>
         <p>
-          新着順で表示。今後アプリが増えても、<code>main.js</code> のデータ配列に1件追加するだけで反映されます。
+          トップでは新着3件までを表示しています。全ての公開アプリは一覧ページからまとめて確認できます。
         </p>
       </div>
       <div id="app-list" class="app-grid" aria-live="polite"></div>
+      <div id="app-list-more" class="section-actions" hidden></div>
     </section>
 
     <section id="business" class="section reveal">
@@ -136,7 +138,7 @@
   </main>
 
   <footer class="site-footer">
-    <small>© <span id="year"></span> くまポップラボ</small>
+    <small>© <span data-year></span> くまポップラボ</small>
   </footer>
 
   <script src="main.js"></script>

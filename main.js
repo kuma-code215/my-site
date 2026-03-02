@@ -4,6 +4,19 @@
   // 追加時はこの配列にオブジェクトを1件追記するだけで表示されます。
   const releasedApps = [
     {
+      name: "fe-study-app",
+      catchCopy: "要点整理と反復学習をひとつにまとめたFE学習アプリ",
+      description: "頻出テーマの確認、スキマ時間の見直し、学習進捗の把握をひとまとめにしやすいFE向け学習アプリ。短時間でも復習しやすい流れで、毎日の積み上げを続けやすくしています。",
+      url: "",
+      linkLabel: "公開リンク準備中",
+      releaseDate: "2026-03-02",
+      tags: ["FE学習", "問題演習", "進捗管理"],
+      status: "公開中",
+      isVisible: true,
+      imageSrc: "images/fe_img_use.PNG",
+      imageAlt: "fe-study-appの学習画面イメージ"
+    },
+    {
       name: "KeepProof",
       catchCopy: "レシートや保証書を画像からまとめて探せる管理アプリ",
       description: "レシート、保証書、取扱説明書の画像をまとめて取り込み、OCRで必要な情報をすぐ見つけやすくした保管アプリ。あとから店名や金額で探したい時にも、一覧で整理して確認できます。",
@@ -56,12 +69,15 @@
   ];
 
   const appList = document.getElementById("app-list");
-  const year = document.getElementById("year");
+  const appListAll = document.getElementById("app-list-all");
+  const appListMore = document.getElementById("app-list-more");
+  const years = Array.from(document.querySelectorAll("[data-year]"));
   const heroBear = document.getElementById("heroBear");
+  const visibleApps = getVisibleApps(releasedApps);
 
-  if (year) {
+  years.forEach((year) => {
     year.textContent = String(new Date().getFullYear());
-  }
+  });
 
   if (heroBear) {
     heroBear.addEventListener("error", () => {
@@ -73,22 +89,54 @@
   }
 
   if (appList) {
-    renderAppCards(appList, releasedApps);
+    renderAppCards(appList, visibleApps.slice(0, 3));
+  }
+
+  if (appListMore) {
+    renderAppListMore(appListMore, visibleApps.length);
+  }
+
+  if (appListAll) {
+    renderAppCards(appListAll, visibleApps);
   }
 
   setupReveal();
 
   function renderAppCards(target, apps) {
-    const visibleApps = apps
-      .filter((app) => app.isVisible !== false)
-      .sort((a, b) => toTimestamp(b.releaseDate) - toTimestamp(a.releaseDate));
-
-    if (!visibleApps.length) {
+    if (!apps.length) {
       target.innerHTML = '<p class="app-empty">公開中のアプリは準備中です。</p>';
       return;
     }
 
-    target.innerHTML = visibleApps.map((app) => createAppCard(app)).join("");
+    target.innerHTML = apps.map((app) => createAppCard(app)).join("");
+  }
+
+  function renderAppListMore(target, appCount) {
+    if (appCount <= 3) {
+      target.hidden = true;
+      target.innerHTML = "";
+      return;
+    }
+
+    const olderCount = appCount - 3;
+    target.hidden = false;
+    target.innerHTML = `
+      <div class="promo-card promo-card--soft">
+        <div class="promo-card__body">
+          <h3>続きのアプリも掲載中</h3>
+          <p>トップに入りきらない ${escapeHtml(String(olderCount))} 件は、アプリ一覧ページでまとめて見られます。</p>
+        </div>
+        <div class="promo-card__actions">
+          <a class="btn btn--primary" href="apps.html">アプリ一覧を見る</a>
+        </div>
+      </div>
+    `;
+  }
+
+  function getVisibleApps(apps) {
+    return apps
+      .filter((app) => app.isVisible !== false)
+      .sort((a, b) => toTimestamp(b.releaseDate) - toTimestamp(a.releaseDate));
   }
 
   function createAppCard(app) {
