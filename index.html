@@ -29,7 +29,10 @@
       <span class="brand__icon">🐻</span>
       <span class="brand__name">くまポップラボ</span>
     </a>
-    <a class="header-cta" href="apps.html">アプリ一覧を見る</a>
+    <div class="header-actions">
+      <a class="header-cta header-cta--outline" href="portfolio/">ポートフォリオ</a>
+      <a class="header-cta" href="apps.html">アプリ一覧を見る</a>
+    </div>
   </header>
 
   <main id="top" class="page">
@@ -44,6 +47,7 @@
         <div class="hero__actions">
           <a class="btn btn--primary" href="#apps">最新アプリを見る</a>
           <a class="btn btn--ghost" href="apps.html">アプリ一覧へ</a>
+          <a class="btn btn--ghost" href="portfolio/">制作ポートフォリオへ</a>
         </div>
       </div>
 
@@ -51,7 +55,7 @@
         <img
           id="heroBear"
           class="hero__bear"
-          src="https://images.unsplash.com/photo-1548094990-c16ca90f1f0d?auto=format&fit=crop&fm=jpg&ixlib=rb-4.1.0&q=80&w=1600"
+          src="https://images.unsplash.com/photo-1548094990-c16ca90f1f0d?auto=format&amp;fit=crop&amp;fm=jpg&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1600"
           data-fallback="assets/hero-visual.svg"
           alt="白いデスクにノートPCとキーボードが並ぶワークスペース"
         />
@@ -72,6 +76,42 @@
       </div>
       <div id="app-list" class="app-grid" aria-live="polite"></div>
       <div id="app-list-more" class="section-actions" hidden></div>
+    </section>
+
+    <section id="portfolio-intro" class="section reveal">
+      <div class="section-heading">
+        <p class="section-heading__label">New</p>
+        <h2>制作ポートフォリオページ</h2>
+        <p>
+          デザイン実績、制作フロー、演出をまとめた専用ページを公開しました。
+          かっこよさと使いやすさを両立したUIサンプルを確認できます。
+        </p>
+      </div>
+
+      <article class="promo-card promo-card--portfolio">
+        <figure class="promo-card__media">
+          <img
+            src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&amp;fit=crop&amp;fm=jpg&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1400"
+            alt="デザインツールが表示されたPC画面"
+            loading="lazy"
+          />
+          <figcaption>
+            Photo by
+            <a href="https://unsplash.com/photos/yC-Yzbqy7PY" target="_blank" rel="noreferrer">Clément H / Unsplash</a>
+          </figcaption>
+        </figure>
+        <div class="promo-card__body">
+          <h3>Portfolio / Creative Showcase</h3>
+          <p>
+            スクロール演出やカードアニメーションを取り入れた、ポートフォリオ専用ページです。
+            スマホからも見やすいレスポンシブ構成で、世界観と情報の読みやすさを整えています。
+          </p>
+        </div>
+        <div class="promo-card__actions">
+          <a class="btn btn--primary" href="portfolio/">ポートフォリオを見る</a>
+          <a class="btn btn--ghost" href="#business">制作サービスへ進む</a>
+        </div>
+      </article>
     </section>
 
     <section id="business" class="section reveal">

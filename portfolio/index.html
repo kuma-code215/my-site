@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio | くまポップラボ</title>
+  <meta
+    name="description"
+    content="くまポップラボの制作ポートフォリオ。Web制作・アプリUI・LP実績を、演出つきで紹介します。"
+  />
+  <meta name="theme-color" content="#0f1728" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,400;10..48,500;10..48,700;10..48,800&amp;family=Zen+Kaku+Gothic+New:wght@400;500;700;900&amp;display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="portfolio.css" />
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+  <div class="orb orb--a" aria-hidden="true"></div>
+  <div class="orb orb--b" aria-hidden="true"></div>
+
+  <header class="portfolio-header">
+    <a class="portfolio-brand" href="../index.html" aria-label="くまポップラボ トップへ戻る">
+      <span class="portfolio-brand__icon">◉</span>
+      <span class="portfolio-brand__name">KUMA POP LAB</span>
+    </a>
+    <nav class="portfolio-nav" aria-label="ページ移動">
+      <a href="#works">実績</a>
+      <a href="#flow">進め方</a>
+      <a class="portfolio-nav__cta" href="../index.html">本サイトへ</a>
+    </nav>
+  </header>
+
+  <main class="portfolio-page">
+    <section class="hero reveal">
+      <div>
+        <p class="hero__eyebrow">Portfolio / Creative Web &amp; App</p>
+        <h1 class="hero__title">見た瞬間に印象が残る、<br />使いやすい体験デザイン。</h1>
+        <p class="hero__lead">
+          ポップな世界観と成果導線を両立した制作を行っています。
+          Webサイト、LP、アプリUIまで、ビジュアルと運用しやすさを一緒に設計します。
+        </p>
+        <div class="hero__actions">
+          <a class="btn btn--solid" href="#works">実績をみる</a>
+          <a class="btn btn--line" href="../index.html#business">サービス説明へ</a>
+        </div>
+      </div>
+      <figure class="hero__visual">
+        <img
+          src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&amp;fit=crop&amp;fm=jpg&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1400"
+          alt="PCとタブレットが並ぶ制作デスク"
+          loading="eager"
+        />
+        <figcaption>
+          Photo by
+          <a href="https://unsplash.com/photos/5fNmWej4tAA" target="_blank" rel="noreferrer">Marvin Meyer / Unsplash</a>
+        </figcaption>
+        <div class="hero-chip hero-chip--a">UI/UX</div>
+        <div class="hero-chip hero-chip--b">Brand Landing</div>
+        <div class="hero-chip hero-chip--c">Mobile First</div>
+      </figure>
+    </section>
+
+    <section id="works" class="section reveal">
+      <div class="section-heading">
+        <p class="section-heading__label">Selected Works</p>
+        <h2>制作実績ピックアップ</h2>
+      </div>
+      <div class="work-grid">
+        <article class="work-card">
+          <img src="https://images.unsplash.com/photo-1559028006-448665bd7c7f?auto=format&amp;fit=crop&amp;fm=jpg&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1200" alt="美容ブランドLPのモック" loading="lazy" />
+          <div class="work-card__body">
+            <p class="work-card__tag">LP / Beauty</p>
+            <h3>Glow Skin LP</h3>
+            <p>ブランドトーンを統一し、CV導線をスマホ優先で最適化したランディングページ。</p>
+          </div>
+        </article>
+        <article class="work-card">
+          <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&amp;fit=crop&amp;fm=jpg&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1200" alt="SaaSダッシュボードUI" loading="lazy" />
+          <div class="work-card__body">
+            <p class="work-card__tag">Web App / SaaS</p>
+            <h3>FlowBoard</h3>
+            <p>情報優先度を整理し、初見でも迷わないカードUIを設計した業務ダッシュボード。</p>
+          </div>
+        </article>
+        <article class="work-card">
+          <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&amp;fit=crop&amp;fm=jpg&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1200" alt="飲食店サイトの撮影イメージ" loading="lazy" />
+          <div class="work-card__body">
+            <p class="work-card__tag">Corporate Site</p>
+            <h3>NOOK Cafe</h3>
+            <p>写真体験を活かした店内紹介と予約導線を組み合わせたコーポレートサイト。</p>
+          </div>
+        </article>
+        <article class="work-card">
+          <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&amp;fit=crop&amp;fm=jpg&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1200" alt="モバイルアプリUIデザイン" loading="lazy" />
+          <div class="work-card__body">
+            <p class="work-card__tag">App UI</p>
+            <h3>Habit Garden</h3>
+            <p>継続しやすい入力フローと、達成感を高めるマイクロアニメーションを実装。</p>
+          </div>
+        </article>
+        <article class="work-card">
+          <img src="https://images.unsplash.com/photo-1484417894907-623942c8ee29?auto=format&amp;fit=crop&amp;fm=jpg&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1200" alt="クリエイティブチームの作業風景" loading="lazy" />
+          <div class="work-card__body">
+            <p class="work-card__tag">Rebranding</p>
+            <h3>North Studio</h3>
+            <p>トーン設計からサイト改修まで一貫して行い、問い合わせ率向上を支援。</p>
+          </div>
+        </article>
+        <article class="work-card">
+          <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&amp;fit=crop&amp;fm=jpg&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1200" alt="プロジェクト打ち合わせの様子" loading="lazy" />
+          <div class="work-card__body">
+            <p class="work-card__tag">Team Support</p>
+            <h3>Launch Partner</h3>
+            <p>仕様整理から公開後の改善まで伴走し、制作チームの開発フローを標準化。</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="flow" class="section reveal">
+      <div class="section-heading">
+        <p class="section-heading__label">How We Build</p>
+        <h2>制作フロー</h2>
+      </div>
+      <ol class="flow-list">
+        <li>
+          <p class="flow-list__index">01</p>
+          <h3>ヒアリング &amp; 方向性決定</h3>
+          <p>目標と課題を整理し、デザインの世界観と導線設計の軸を決めます。</p>
+        </li>
+        <li>
+          <p class="flow-list__index">02</p>
+          <h3>UI設計 &amp; ワイヤー作成</h3>
+          <p>スマホレイアウトから設計し、必要な情報を最短で届ける構成にします。</p>
+        </li>
+        <li>
+          <p class="flow-list__index">03</p>
+          <h3>実装 &amp; アニメーション</h3>
+          <p>軽さを保った演出で、印象と使いやすさを両立した画面を仕上げます。</p>
+        </li>
+        <li>
+          <p class="flow-list__index">04</p>
+          <h3>公開 &amp; 継続改善</h3>
+          <p>公開後の反応を見ながら、CTAや構成を継続的に改善します。</p>
+        </li>
+      </ol>
+    </section>
+
+    <section class="section reveal">
+      <div class="stats-grid" aria-label="実績数値">
+        <article class="stat-card">
+          <p class="stat-card__value" data-count-to="34">0</p>
+          <p class="stat-card__label">Projects</p>
+        </article>
+        <article class="stat-card">
+          <p class="stat-card__value" data-count-to="96">0</p>
+          <p class="stat-card__label">Client Satisfaction %</p>
+        </article>
+        <article class="stat-card">
+          <p class="stat-card__value" data-count-to="4">0</p>
+          <p class="stat-card__label">Years of Building</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="contact-band reveal">
+      <h2>この雰囲気で、あなたのサービスも作れます。</h2>
+      <p>まずは要件がふんわりでもOKです。目的から一緒に設計します。</p>
+      <div class="hero__actions">
+        <a class="btn btn--solid" href="../index.html#business">制作サービス詳細を見る</a>
+        <a class="btn btn--line" href="../apps.html">公開アプリを見る</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="portfolio-footer">
+    <small>© <span data-year></span> くまポップラボ</small>
+    <p>
+      Photo materials: <a href="https://unsplash.com" target="_blank" rel="noreferrer">Unsplash</a>
+    </p>
+  </footer>
+
+  <script src="portfolio.js"></script>
+</body>
+</html>
