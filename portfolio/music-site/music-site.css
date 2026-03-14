@@ -1,9 +1,12 @@
 :root {
   --ink: #1c2a48;
   --ink-soft: #556b93;
-  --surface: rgba(236, 244, 255, 0.72);
+  --surface: rgba(236, 244, 255, 0.56);
   --surface-line: rgba(149, 172, 209, 0.52);
-  --surface-hi: rgba(255, 255, 255, 0.74);
+  --surface-hi: rgba(255, 255, 255, 0.62);
+  --gold-line: rgba(188, 148, 79, 0.48);
+  --parallax-harp: 0px;
+  --parallax-texture: 0px;
   --accent: #b89252;
   --accent-deep: #785723;
   --radius-xl: 36px;
@@ -47,6 +50,8 @@ a {
   background-size: cover;
   background-position: center;
   opacity: 0.94;
+  transform: translate3d(0, var(--parallax-harp), 0) scale(1.02);
+  will-change: transform;
 }
 
 .bg-layer--texture {
@@ -58,6 +63,8 @@ a {
   background-position: center;
   opacity: 0.13;
   mix-blend-mode: screen;
+  transform: translate3d(0, var(--parallax-texture), 0) scale(1.03);
+  will-change: transform;
 }
 
 .bg-glass {
@@ -87,6 +94,18 @@ a {
   border-radius: inherit;
   background: linear-gradient(122deg, rgba(255, 255, 255, 0.38), transparent 48%);
   opacity: 0.54;
+  pointer-events: none;
+}
+
+.glass-card::after,
+.track-card::after,
+.program-card::after {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  border-radius: inherit;
+  border: 1px solid var(--gold-line);
+  opacity: 0.72;
   pointer-events: none;
 }
 
@@ -130,7 +149,7 @@ a {
   color: #5f523c;
   border-radius: 999px;
   border: 1px solid rgba(137, 160, 194, 0.46);
-  background: rgba(255, 255, 255, 0.44);
+  background: rgba(255, 255, 255, 0.34);
   padding: 9px 14px;
   text-align: center;
   flex: 1 1 calc(50% - 8px);
@@ -144,7 +163,7 @@ a {
 
 .topbar__nav a:hover {
   transform: translateY(-2px);
-  background: rgba(255, 255, 255, 0.62);
+  background: rgba(255, 255, 255, 0.5);
 }
 
 .page {
@@ -509,5 +528,10 @@ a {
   *::after {
     animation: none !important;
     transition: none !important;
+  }
+
+  .bg-layer--harp,
+  .bg-layer--texture {
+    transform: none !important;
   }
 }

@@ -9,6 +9,7 @@
   }
 
   setupReveal(revealItems);
+  setupBackgroundParallax();
 
   function setupReveal(elements) {
     if (!elements.length) {
@@ -33,5 +34,34 @@
       element.style.transitionDelay = `${Math.min(index * 80, 260)}ms`;
       observer.observe(element);
     });
+  }
+
+  function setupBackgroundParallax() {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      return;
+    }
+
+    let ticking = false;
+
+    const update = () => {
+      const y = window.scrollY || window.pageYOffset || 0;
+      document.documentElement.style.setProperty("--parallax-harp", `${(y * 0.06).toFixed(2)}px`);
+      document.documentElement.style.setProperty("--parallax-texture", `${(y * 0.11).toFixed(2)}px`);
+      ticking = false;
+    };
+
+    window.addEventListener(
+      "scroll",
+      () => {
+        if (ticking) {
+          return;
+        }
+        ticking = true;
+        requestAnimationFrame(update);
+      },
+      { passive: true }
+    );
+
+    update();
   }
 })();
