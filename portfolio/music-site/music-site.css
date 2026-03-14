@@ -2,9 +2,9 @@
   --ink: #1c2740;
   --ink-soft: #4f5f81;
   --line: rgba(130, 154, 194, 0.36);
-  --glass: rgba(255, 255, 255, 0.16);
-  --glass-strong: rgba(255, 255, 255, 0.22);
-  --glass-edge: rgba(255, 255, 255, 0.46);
+  --glass: rgba(255, 255, 255, 0.12);
+  --glass-strong: rgba(255, 255, 255, 0.16);
+  --glass-edge: rgba(255, 255, 255, 0.36);
   --accent: #bb9656;
   --accent-deep: #7d6030;
   --radius-xl: 30px;
@@ -46,7 +46,7 @@ a {
   z-index: -4;
   background-image:
     radial-gradient(circle at var(--mouse-x) var(--mouse-y), rgba(176, 203, 238, 0.2), transparent 35%),
-    linear-gradient(138deg, rgba(243, 247, 255, 0.8), rgba(229, 238, 251, 0.67)),
+    linear-gradient(138deg, rgba(243, 247, 255, 0.62), rgba(229, 238, 251, 0.52)),
     url("https://images.pexels.com/photos/1261731/pexels-photo-1261731.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=2200");
   background-size: auto, auto, cover;
   background-position: center;
@@ -56,11 +56,11 @@ a {
 .bg-layer--harp {
   z-index: -3;
   background-image:
-    linear-gradient(120deg, rgba(247, 237, 210, 0.24), rgba(224, 235, 250, 0.16)),
+    linear-gradient(120deg, rgba(247, 237, 210, 0.18), rgba(224, 235, 250, 0.1)),
     url("https://images.unsplash.com/photo-1552587519-96f6cec0f4d7?auto=format&fit=crop&fm=jpg&ixlib=rb-4.1.0&q=80&w=2200");
   background-size: cover;
   background-position: center 26%;
-  opacity: 0.26;
+  opacity: 0.2;
   mix-blend-mode: multiply;
   transform: scale(1.03);
 }
@@ -68,15 +68,15 @@ a {
 .bg-glass {
   z-index: -2;
   background:
-    linear-gradient(170deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.08)),
-    radial-gradient(circle at 84% 16%, rgba(255, 255, 255, 0.2), transparent 46%);
+    linear-gradient(170deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.04)),
+    radial-gradient(circle at 84% 16%, rgba(255, 255, 255, 0.12), transparent 46%);
 }
 
 .glass-card {
   position: relative;
   border: 1px solid var(--line);
   border-top-color: var(--glass-edge);
-  background: linear-gradient(150deg, rgba(255, 255, 255, 0.26), rgba(255, 255, 255, 0.08));
+  background: linear-gradient(150deg, rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0.04));
   backdrop-filter: blur(17px) saturate(140%);
   box-shadow: 0 18px 40px rgba(81, 101, 136, 0.2);
 }
@@ -86,8 +86,8 @@ a {
   position: absolute;
   inset: 0;
   border-radius: inherit;
-  background: linear-gradient(120deg, rgba(255, 255, 255, 0.32), transparent 45%);
-  opacity: 0.55;
+  background: linear-gradient(120deg, rgba(255, 255, 255, 0.22), transparent 45%);
+  opacity: 0.42;
   pointer-events: none;
 }
 
@@ -132,7 +132,7 @@ a {
   text-align: center;
   border-radius: 999px;
   border: 1px solid rgba(136, 156, 188, 0.34);
-  background: rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.09);
   flex: 1 1 calc(50% - 7px);
   min-width: 118px;
   transition: transform 0.2s ease, background-color 0.2s ease;
@@ -144,7 +144,7 @@ a {
 
 .topbar__nav a:hover {
   transform: translateY(-2px);
-  background: rgba(255, 255, 255, 0.28);
+  background: rgba(255, 255, 255, 0.18);
 }
 
 .page {
@@ -222,7 +222,7 @@ a {
 .btn--line {
   color: #31486d;
   border-color: rgba(117, 143, 177, 0.5);
-  background: rgba(255, 255, 255, 0.11);
+  background: rgba(255, 255, 255, 0.07);
 }
 
 .hero-stats {
@@ -237,7 +237,7 @@ a {
 .hero-stats li {
   border-radius: 12px;
   border: 1px solid rgba(143, 165, 199, 0.36);
-  background: rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.09);
   padding: 10px;
   text-align: center;
 }
@@ -381,19 +381,19 @@ a {
 
 .scene-card--a {
   background-image:
-    linear-gradient(145deg, rgba(201, 164, 97, 0.33), rgba(255, 255, 255, 0.08)),
+    linear-gradient(145deg, rgba(201, 164, 97, 0.33), rgba(255, 255, 255, 0.03)),
     radial-gradient(circle at 86% 20%, rgba(255, 230, 173, 0.4), transparent 42%);
 }
 
 .scene-card--b {
   background-image:
-    linear-gradient(145deg, rgba(115, 148, 194, 0.32), rgba(255, 255, 255, 0.08)),
+    linear-gradient(145deg, rgba(115, 148, 194, 0.32), rgba(255, 255, 255, 0.03)),
     radial-gradient(circle at 10% 78%, rgba(180, 209, 241, 0.36), transparent 44%);
 }
 
 .scene-card--c {
   background-image:
-    linear-gradient(145deg, rgba(136, 150, 176, 0.32), rgba(255, 255, 255, 0.08)),
+    linear-gradient(145deg, rgba(136, 150, 176, 0.32), rgba(255, 255, 255, 0.03)),
     radial-gradient(circle at 70% 10%, rgba(240, 245, 255, 0.34), transparent 48%);
 }
 
@@ -419,7 +419,7 @@ a {
 .program-card {
   border-radius: var(--radius-md);
   border: 1px solid rgba(133, 158, 194, 0.36);
-  background: rgba(255, 255, 255, 0.13);
+  background: rgba(255, 255, 255, 0.08);
   padding: 12px;
 }
 
