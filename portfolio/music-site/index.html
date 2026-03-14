@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Golden Harp Resonance | Music Site</title>
+  <meta
+    name="description"
+    content="金のハープの輝きと余韻を重ねた、静謐な音楽体験サイト。"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&amp;family=Noto+Sans+JP:wght@400;500;700&amp;display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="music-site.css" />
+</head>
+<body>
+  <div class="bg-layer bg-layer--texture" aria-hidden="true"></div>
+  <div class="bg-layer bg-layer--harp" aria-hidden="true"></div>
+  <div class="bg-glass" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <a class="brand" href="../index.html">KUMA POP LAB / Portfolio</a>
+    <nav class="topbar__nav" aria-label="ページ移動">
+      <a href="#listen">Listen</a>
+      <a href="#program">Program</a>
+      <a href="../index.html">/portfolioへ戻る</a>
+    </nav>
+  </header>
+
+  <main class="page">
+    <section class="hero reveal">
+      <p class="hero__eyebrow">Music Installation Site</p>
+      <h1>Golden Harp Resonance</h1>
+      <p class="hero__lead">
+        金のハープの輝きと倍音を重ねることで、
+        白く青い空気の中に音の輪郭が浮かび上がる体験をデザインしました。
+      </p>
+      <div class="hero__actions">
+        <a class="btn btn--solid" href="#listen">プレイリストへ</a>
+        <a class="btn btn--line" href="#program">ライブ情報へ</a>
+      </div>
+      <p class="hero__sub">Ambient / Neo-Classical / Experimental</p>
+    </section>
+
+    <section id="listen" class="panel reveal">
+      <div class="panel__header">
+        <p class="panel__eyebrow">Featured Tracks</p>
+        <h2>静かな残響に耳を澄ませる3曲</h2>
+      </div>
+      <div class="track-grid">
+        <article class="track-card">
+          <p class="track-card__time">06:42</p>
+          <h3>Golden Prelude</h3>
+          <p>金のハープを最小限のタッチで重ね、空間の残響だけを主役にした導入曲。</p>
+        </article>
+        <article class="track-card">
+          <p class="track-card__time">08:17</p>
+          <h3>Blue Light Drift</h3>
+          <p>白いノイズと低域ドローンを混ぜ、光が漂う速度を音像として再構築。</p>
+        </article>
+        <article class="track-card">
+          <p class="track-card__time">05:29</p>
+          <h3>Harp in the Veil</h3>
+          <p>ベルベットのような中高域と極薄パーカッションで、透明感を残す終曲。</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="program" class="program reveal">
+      <div class="panel__header">
+        <p class="panel__eyebrow">Live Program</p>
+        <h2>音と光のセッション</h2>
+      </div>
+      <div class="program-grid">
+        <article class="program-card">
+          <p class="program-card__label">Tokyo</p>
+          <h3>March 28, 2026</h3>
+          <p>代官山ギャラリーで、金の粒子を思わせる映像投影と同時演奏。</p>
+        </article>
+        <article class="program-card">
+          <p class="program-card__label">Kyoto</p>
+          <h3>April 11, 2026</h3>
+          <p>白壁空間のリバーブを生かした、アンビエントセット。</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <small>© <span data-year></span> Golden Harp Resonance</small>
+    <p>
+      Backgrounds:
+      <a href="https://unsplash.com/photos/-EyMHutKBLo" target="_blank" rel="noreferrer">Harp photo (Unsplash)</a>
+      /
+      <a href="https://www.pexels.com/photo/trees-under-white-and-blue-cloudy-sky-1261731/" target="_blank" rel="noreferrer">Blue-white texture (Pexels)</a>
+    </p>
+  </footer>
+
+  <script src="music-site.js"></script>
+</body>
+</html>
