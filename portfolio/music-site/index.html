@@ -21,69 +21,105 @@
   <div class="bg-layer bg-layer--harp" aria-hidden="true"></div>
   <div class="bg-glass" aria-hidden="true"></div>
 
-  <header class="topbar">
+  <header class="topbar glass-card">
     <a class="brand" href="../index.html">KUMA POP LAB / Portfolio</a>
     <nav class="topbar__nav" aria-label="ページ移動">
       <a href="#listen">Listen</a>
+      <a href="#visual">Visual</a>
       <a href="#program">Program</a>
       <a href="../index.html">/portfolioへ戻る</a>
     </nav>
   </header>
 
   <main class="page">
-    <section class="hero reveal">
-      <p class="hero__eyebrow">Music Installation Site</p>
+    <section class="hero glass-card reveal">
+      <p class="hero__eyebrow">Immersive Music Site</p>
       <h1>Golden Harp Resonance</h1>
-      <p class="hero__lead">
-        金のハープの輝きと倍音を重ねることで、
-        白く青い空気の中に音の輪郭が浮かび上がる体験をデザインしました。
-      </p>
+      <p class="hero__lead">金のハープがひらく、青白い余韻。</p>
       <div class="hero__actions">
-        <a class="btn btn--solid" href="#listen">プレイリストへ</a>
-        <a class="btn btn--line" href="#program">ライブ情報へ</a>
+        <a class="btn btn--solid" href="#listen">Play Session</a>
+        <a class="btn btn--line" href="#program">Live Dates</a>
       </div>
-      <p class="hero__sub">Ambient / Neo-Classical / Experimental</p>
+      <ul class="hero-stats" aria-label="サイト情報">
+        <li><span>03</span><small>Tracks</small></li>
+        <li><span>04</span><small>Scenes</small></li>
+        <li><span>2h</span><small>Live Set</small></li>
+      </ul>
     </section>
 
-    <section id="listen" class="panel reveal">
-      <div class="panel__header">
-        <p class="panel__eyebrow">Featured Tracks</p>
-        <h2>静かな残響に耳を澄ませる3曲</h2>
+    <section id="visual" class="visual-grid reveal" aria-label="ビジュアルコンテンツ">
+      <article class="now-playing glass-card">
+        <p class="label">Now Playing</p>
+        <h2>Harp in Blue Air</h2>
+        <p class="now-playing__meta">78 BPM / D Major / Tape Glow</p>
+        <div class="waveform" aria-hidden="true">
+          <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+        </div>
+      </article>
+      <article class="scene-card scene-card--a glass-card">
+        <p class="label">Light</p>
+        <h3>Gold Dust</h3>
+      </article>
+      <article class="scene-card scene-card--b glass-card">
+        <p class="label">Texture</p>
+        <h3>Blue Mist</h3>
+      </article>
+      <article class="scene-card scene-card--c glass-card">
+        <p class="label">Space</p>
+        <h3>Quiet Hall</h3>
+      </article>
+    </section>
+
+    <section id="listen" class="section glass-card reveal">
+      <div class="section-head">
+        <p class="label">Featured Tracks</p>
+        <h2>Selected Three</h2>
       </div>
       <div class="track-grid">
         <article class="track-card">
           <p class="track-card__time">06:42</p>
           <h3>Golden Prelude</h3>
-          <p>金のハープを最小限のタッチで重ね、空間の残響だけを主役にした導入曲。</p>
+          <p>soft plucks / long tail</p>
         </article>
         <article class="track-card">
           <p class="track-card__time">08:17</p>
           <h3>Blue Light Drift</h3>
-          <p>白いノイズと低域ドローンを混ぜ、光が漂う速度を音像として再構築。</p>
+          <p>noise haze / low drone</p>
         </article>
         <article class="track-card">
           <p class="track-card__time">05:29</p>
-          <h3>Harp in the Veil</h3>
-          <p>ベルベットのような中高域と極薄パーカッションで、透明感を残す終曲。</p>
+          <h3>Veil Resonance</h3>
+          <p>clear highs / thin pulse</p>
         </article>
       </div>
     </section>
 
-    <section id="program" class="program reveal">
-      <div class="panel__header">
-        <p class="panel__eyebrow">Live Program</p>
-        <h2>音と光のセッション</h2>
+    <section id="program" class="section glass-card reveal">
+      <div class="section-head">
+        <p class="label">Live Program</p>
+        <h2>2026 Schedule</h2>
       </div>
       <div class="program-grid">
         <article class="program-card">
-          <p class="program-card__label">Tokyo</p>
-          <h3>March 28, 2026</h3>
-          <p>代官山ギャラリーで、金の粒子を思わせる映像投影と同時演奏。</p>
+          <p class="program-card__date">03.28</p>
+          <h3>Tokyo</h3>
+          <p>Daikanyama Gallery</p>
         </article>
         <article class="program-card">
-          <p class="program-card__label">Kyoto</p>
-          <h3>April 11, 2026</h3>
-          <p>白壁空間のリバーブを生かした、アンビエントセット。</p>
+          <p class="program-card__date">04.11</p>
+          <h3>Kyoto</h3>
+          <p>White Hall Session</p>
+        </article>
+        <article class="program-card">
+          <p class="program-card__date">05.02</p>
+          <h3>Osaka</h3>
+          <p>Night Resonance</p>
+        </article>
+        <article class="program-card">
+          <p class="program-card__date">05.23</p>
+          <h3>Yokohama</h3>
+          <p>Golden Echo Set</p>
         </article>
       </div>
     </section>
