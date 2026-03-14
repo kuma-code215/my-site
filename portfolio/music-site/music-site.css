@@ -43,10 +43,10 @@ a {
   z-index: -4;
   background-image:
     linear-gradient(116deg, rgba(15, 24, 43, 0.2), rgba(24, 39, 64, 0.06)),
-    url("https://images.pexels.com/photos/12798701/pexels-photo-12798701.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=2400");
+    url("https://images.unsplash.com/photo-1552587519-96f6cec0f4d7?auto=format&fit=crop&fm=jpg&ixlib=rb-4.1.0&q=80&w=2400");
   background-size: cover;
-  background-position: 18% center;
-  opacity: 0.96;
+  background-position: center 36%;
+  opacity: 0.94;
 }
 
 .bg-layer--texture {
@@ -56,15 +56,15 @@ a {
     url("https://images.pexels.com/photos/1261731/pexels-photo-1261731.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=2400");
   background-size: cover;
   background-position: center;
-  opacity: 0.11;
+  opacity: 0.08;
   mix-blend-mode: screen;
 }
 
 .bg-glass {
   z-index: -2;
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.04)),
-    radial-gradient(circle at 78% 18%, rgba(210, 229, 255, 0.16), transparent 44%);
+    linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02)),
+    radial-gradient(circle at 78% 18%, rgba(210, 229, 255, 0.11), transparent 44%);
 }
 
 .glass-card,
@@ -108,7 +108,7 @@ a {
   z-index: 1;
   text-decoration: none;
   font-family: "Cormorant Garamond", serif;
-  font-size: clamp(24px, 5.4vw, 40px);
+  font-size: clamp(22px, 4.7vw, 32px);
   letter-spacing: 0.025em;
   font-weight: 600;
 }
@@ -150,16 +150,16 @@ a {
 .page {
   width: min(1100px, calc(100% - 28px));
   margin-inline: auto;
-  padding: 36px 0 130px;
+  padding: 28px 0 90px;
 }
 
 .hero {
   border-radius: var(--radius-xl);
-  min-height: clamp(560px, 78vh, 860px);
-  padding: clamp(30px, 7vw, 92px);
+  min-height: clamp(420px, 62vh, 660px);
+  padding: clamp(24px, 5.2vw, 58px);
   display: grid;
   align-content: space-between;
-  gap: 28px;
+  gap: 20px;
 }
 
 .hero > * {
@@ -180,15 +180,15 @@ a {
 .hero h1 {
   margin: 10px 0 0;
   font-family: "Cormorant Garamond", serif;
-  font-size: clamp(62px, 13.8vw, 168px);
-  line-height: 0.9;
+  font-size: clamp(46px, 10.6vw, 108px);
+  line-height: 0.93;
   letter-spacing: 0.012em;
 }
 
 .hero__lead {
   margin: 24px 0 0;
   max-width: 24ch;
-  font-size: clamp(18px, 2.9vw, 30px);
+  font-size: clamp(15px, 2.3vw, 22px);
   line-height: 1.56;
   color: #2f456b;
 }
@@ -251,7 +251,7 @@ a {
 .hero-stats span {
   display: block;
   font-family: "Cormorant Garamond", serif;
-  font-size: clamp(29px, 7vw, 46px);
+  font-size: clamp(24px, 5.6vw, 36px);
   line-height: 1;
 }
 
@@ -263,7 +263,7 @@ a {
 }
 
 .visual-grid {
-  margin-top: clamp(72px, 12vw, 160px);
+  margin-top: clamp(44px, 8vw, 92px);
   display: grid;
   gap: clamp(16px, 2.6vw, 30px);
 }
@@ -293,7 +293,7 @@ a {
 }
 
 .now-playing {
-  min-height: clamp(280px, 45vw, 460px);
+  min-height: clamp(220px, 32vw, 340px);
   display: grid;
   align-content: start;
 }
@@ -301,8 +301,8 @@ a {
 .now-playing h2 {
   margin: 10px 0 0;
   font-family: "Cormorant Garamond", serif;
-  font-size: clamp(48px, 8.4vw, 88px);
-  line-height: 0.9;
+  font-size: clamp(34px, 6.6vw, 62px);
+  line-height: 0.92;
 }
 
 .now-playing__meta {
@@ -322,7 +322,7 @@ a {
 }
 
 .scene-card {
-  min-height: clamp(230px, 32vw, 370px);
+  min-height: clamp(180px, 24vw, 280px);
   display: grid;
   align-content: end;
 }
@@ -330,19 +330,19 @@ a {
 .scene-card h3 {
   margin: 9px 0 0;
   font-family: "Cormorant Garamond", serif;
-  font-size: clamp(36px, 6vw, 62px);
-  line-height: 0.9;
+  font-size: clamp(28px, 4.6vw, 44px);
+  line-height: 0.92;
 }
 
 .section {
-  margin-top: clamp(76px, 11vw, 150px);
+  margin-top: clamp(52px, 8.5vw, 108px);
 }
 
 .section-head h2 {
   margin: 10px 0 0;
   font-family: "Cormorant Garamond", serif;
-  font-size: clamp(44px, 8vw, 80px);
-  line-height: 0.9;
+  font-size: clamp(34px, 6.2vw, 58px);
+  line-height: 0.92;
 }
 
 .track-grid,
@@ -355,7 +355,7 @@ a {
 .track-card,
 .program-card {
   border-radius: var(--radius-md);
-  min-height: 170px;
+  min-height: 136px;
   padding: clamp(16px, 2.8vw, 26px);
 }
 
@@ -373,8 +373,8 @@ a {
 .program-card h3 {
   margin: 9px 0 0;
   font-family: "Cormorant Garamond", serif;
-  font-size: clamp(34px, 5.8vw, 56px);
-  line-height: 0.9;
+  font-size: clamp(24px, 4.2vw, 38px);
+  line-height: 0.94;
 }
 
 .track-card p,
@@ -449,7 +449,7 @@ a {
 
   .page {
     width: min(1100px, calc(100% - 90px));
-    padding-top: 56px;
+    padding-top: 44px;
   }
 
   .hero {
