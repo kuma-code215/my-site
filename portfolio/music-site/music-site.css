@@ -50,8 +50,10 @@ a {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+  transform: translate3d(0, var(--parallax-harp), 0) scale(1.06);
+  transform-origin: center;
   opacity: 0.94;
-  will-change: background-position;
+  will-change: transform;
 }
 
 .bg-layer--texture {
@@ -62,9 +64,11 @@ a {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+  transform: translate3d(0, var(--parallax-texture), 0) scale(1.1);
+  transform-origin: center;
   opacity: 0.13;
   mix-blend-mode: screen;
-  will-change: background-position;
+  will-change: transform;
 }
 
 .bg-glass {
@@ -447,6 +451,12 @@ a {
   transform: translateY(0);
 }
 
+@media (max-width: 859px) {
+  .bg-layer--harp {
+    background-position: center top;
+  }
+}
+
 @media (max-width: 560px) {
   .btn {
     width: 100%;
@@ -543,5 +553,6 @@ a {
   .bg-layer--harp,
   .bg-layer--texture {
     background-position: center !important;
+    transform: none !important;
   }
 }
