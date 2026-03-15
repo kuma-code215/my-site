@@ -46,8 +46,9 @@
 
     const update = () => {
       const y = window.scrollY || window.pageYOffset || 0;
-      const harpOffset = clamp(y * 0.012, 18);
-      const textureOffset = clamp(y * 0.02, 30);
+      const isMobile = window.innerWidth <= 859;
+      const harpOffset = isMobile ? clamp(y * 0.008, 10) : clamp(y * 0.012, 18);
+      const textureOffset = isMobile ? clamp(y * 0.013, 16) : clamp(y * 0.02, 30);
 
       document.documentElement.style.setProperty("--parallax-harp", `${harpOffset.toFixed(2)}px`);
       document.documentElement.style.setProperty("--parallax-texture", `${textureOffset.toFixed(2)}px`);

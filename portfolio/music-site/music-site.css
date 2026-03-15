@@ -452,12 +452,21 @@ a {
 }
 
 @media (max-width: 859px) {
+  .bg-layer {
+    inset: -10vh -14vw;
+  }
+
   .bg-layer--harp {
+    background-size: cover, auto 100%;
     background-position: center top, center top;
   }
 }
 
 @media (max-width: 560px) {
+  .bg-layer {
+    inset: -12vh -18vw;
+  }
+
   .btn {
     width: 100%;
   }
