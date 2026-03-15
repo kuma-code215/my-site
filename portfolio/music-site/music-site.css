@@ -4,7 +4,7 @@
   --surface: rgba(236, 244, 255, 0.56);
   --surface-line: rgba(149, 172, 209, 0.52);
   --surface-hi: rgba(255, 255, 255, 0.62);
-  --gold-line: rgba(188, 148, 79, 0.48);
+  --gold-line: rgba(211, 168, 84, 0.84);
   --parallax-harp: 0px;
   --parallax-texture: 0px;
   --accent: #b89252;
@@ -46,12 +46,16 @@ a {
   z-index: -4;
   background-image:
     linear-gradient(116deg, rgba(15, 24, 43, 0.2), rgba(24, 39, 64, 0.06)),
+    url("./assets/golden-harp-room.jpg"),
     url("./assets/golden-harp-room.jpg");
-  background-size: cover;
-  background-position: center;
+  background-size: cover, contain, cover;
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position:
+    center,
+    center calc(50% + var(--parallax-harp)),
+    center calc(42% + (var(--parallax-harp) * 0.35));
   opacity: 0.94;
-  transform: translate3d(0, var(--parallax-harp), 0) scale(1.02);
-  will-change: transform;
+  will-change: background-position;
 }
 
 .bg-layer--texture {
@@ -60,11 +64,10 @@ a {
     linear-gradient(142deg, rgba(230, 243, 255, 0.22), rgba(244, 249, 255, 0.15)),
     url("https://images.pexels.com/photos/1261731/pexels-photo-1261731.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=2400");
   background-size: cover;
-  background-position: center;
+  background-position: center calc(50% + var(--parallax-texture));
   opacity: 0.13;
   mix-blend-mode: screen;
-  transform: translate3d(0, var(--parallax-texture), 0) scale(1.03);
-  will-change: transform;
+  will-change: background-position;
 }
 
 .bg-glass {
@@ -104,8 +107,9 @@ a {
   position: absolute;
   inset: 1px;
   border-radius: inherit;
-  border: 1px solid var(--gold-line);
-  opacity: 0.72;
+  border: 2px solid var(--gold-line);
+  box-shadow: inset 0 0 0 1px rgba(255, 232, 179, 0.2);
+  opacity: 0.92;
   pointer-events: none;
 }
 
@@ -127,9 +131,9 @@ a {
   z-index: 1;
   text-decoration: none;
   font-family: "Cormorant Garamond", serif;
-  font-size: clamp(22px, 4.7vw, 32px);
+  font-size: clamp(21px, 4.4vw, 30px);
   letter-spacing: 0.025em;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .topbar__nav {
@@ -202,6 +206,7 @@ a {
   font-size: clamp(40px, 8.8vw, 82px);
   line-height: 0.93;
   letter-spacing: 0.012em;
+  font-weight: 400;
 }
 
 .hero__lead {
@@ -210,6 +215,7 @@ a {
   font-size: clamp(14px, 1.9vw, 18px);
   line-height: 1.56;
   color: #2f456b;
+  font-weight: 400;
 }
 
 .hero__actions {
@@ -322,6 +328,7 @@ a {
   font-family: "Cormorant Garamond", serif;
   font-size: clamp(30px, 5.6vw, 48px);
   line-height: 0.92;
+  font-weight: 400;
 }
 
 .now-playing__meta {
@@ -351,6 +358,7 @@ a {
   font-family: "Cormorant Garamond", serif;
   font-size: clamp(25px, 3.8vw, 34px);
   line-height: 0.92;
+  font-weight: 400;
 }
 
 .section {
@@ -362,6 +370,7 @@ a {
   font-family: "Cormorant Garamond", serif;
   font-size: clamp(30px, 5.3vw, 46px);
   line-height: 0.92;
+  font-weight: 400;
 }
 
 .track-grid,
@@ -394,6 +403,7 @@ a {
   font-family: "Cormorant Garamond", serif;
   font-size: clamp(22px, 3.4vw, 30px);
   line-height: 0.94;
+  font-weight: 400;
 }
 
 .track-card p,
@@ -532,6 +542,6 @@ a {
 
   .bg-layer--harp,
   .bg-layer--texture {
-    transform: none !important;
+    background-position: center !important;
   }
 }

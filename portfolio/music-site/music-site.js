@@ -45,8 +45,8 @@
 
     const update = () => {
       const y = window.scrollY || window.pageYOffset || 0;
-      document.documentElement.style.setProperty("--parallax-harp", `${(y * 0.06).toFixed(2)}px`);
-      document.documentElement.style.setProperty("--parallax-texture", `${(y * 0.11).toFixed(2)}px`);
+      document.documentElement.style.setProperty("--parallax-harp", `${(y * 0.018).toFixed(2)}px`);
+      document.documentElement.style.setProperty("--parallax-texture", `${(y * 0.034).toFixed(2)}px`);
       ticking = false;
     };
 
