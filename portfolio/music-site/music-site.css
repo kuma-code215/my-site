@@ -46,14 +46,12 @@ a {
   z-index: -4;
   background-image:
     linear-gradient(116deg, rgba(15, 24, 43, 0.2), rgba(24, 39, 64, 0.06)),
-    url("./assets/golden-harp-room.jpg"),
     url("./assets/golden-harp-room.jpg");
-  background-size: cover, contain, cover;
-  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-size: cover, cover;
+  background-repeat: no-repeat, no-repeat;
   background-position:
     center,
-    center calc(50% + var(--parallax-harp)),
-    center calc(42% + (var(--parallax-harp) * 0.35));
+    center calc(50% + var(--parallax-harp));
   opacity: 0.94;
   will-change: background-position;
 }
@@ -453,6 +451,11 @@ a {
 @media (max-width: 560px) {
   .btn {
     width: 100%;
+  }
+
+  .bg-layer--harp {
+    background-size: cover, contain;
+    background-position: center, center top;
   }
 }
 
