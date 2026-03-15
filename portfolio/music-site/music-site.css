@@ -355,6 +355,10 @@ a {
   min-height: clamp(180px, 24vw, 280px);
   display: grid;
   align-content: end;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .scene-card h3 {
@@ -363,6 +367,31 @@ a {
   font-size: clamp(25px, 3.8vw, 34px);
   line-height: 0.92;
   font-weight: 400;
+  color: rgba(245, 249, 255, 0.96);
+  text-shadow: 0 4px 20px rgba(17, 22, 36, 0.72);
+}
+
+.scene-card .label {
+  color: rgba(226, 238, 255, 0.88);
+  text-shadow: 0 2px 12px rgba(16, 20, 32, 0.6);
+}
+
+.scene-card--a {
+  background-image:
+    linear-gradient(158deg, rgba(8, 14, 27, 0.2), rgba(8, 14, 27, 0.58)),
+    url("./assets/alexandr-istomin-3iqyyQEuaKM-unsplash.jpg");
+}
+
+.scene-card--b {
+  background-image:
+    linear-gradient(160deg, rgba(11, 18, 30, 0.15), rgba(11, 18, 30, 0.62)),
+    url("./assets/belov-sergey-3jyVzCSyTVs-unsplash.jpg");
+}
+
+.scene-card--c {
+  background-image:
+    linear-gradient(156deg, rgba(10, 16, 29, 0.2), rgba(10, 16, 29, 0.56)),
+    url("./assets/danny-greenberg-0m8AcGbV_Co-unsplash.jpg");
 }
 
 .section {
