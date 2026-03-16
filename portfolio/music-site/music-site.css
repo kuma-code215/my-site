@@ -413,6 +413,111 @@ a {
   gap: clamp(14px, 2vw, 22px);
 }
 
+.story-grid {
+  margin-top: clamp(20px, 4vw, 38px);
+  display: grid;
+  gap: clamp(14px, 2vw, 22px);
+}
+
+.story-quote {
+  margin: 0;
+  padding: clamp(20px, 3vw, 30px);
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(170, 189, 226, 0.56);
+  background: linear-gradient(154deg, rgba(243, 247, 255, 0.74), rgba(230, 238, 252, 0.5));
+}
+
+.story-quote p {
+  margin: 0;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(27px, 4.3vw, 40px);
+  line-height: 1.04;
+  letter-spacing: 0.01em;
+}
+
+.story-quote cite {
+  display: block;
+  margin-top: 14px;
+  font-style: normal;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #6f84ad;
+}
+
+.story-points {
+  display: grid;
+  gap: 12px;
+}
+
+.story-point {
+  padding: clamp(16px, 2.6vw, 24px);
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(152, 176, 214, 0.48);
+  background: rgba(246, 250, 255, 0.58);
+}
+
+.story-point__label {
+  margin: 0;
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #7088b4;
+  font-weight: 700;
+}
+
+.story-point h3 {
+  margin: 8px 0 0;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(24px, 3vw, 30px);
+  line-height: 0.96;
+  font-weight: 400;
+}
+
+.story-point p {
+  margin: 10px 0 0;
+  font-size: 13px;
+  line-height: 1.65;
+  color: var(--ink-soft);
+}
+
+.journal-list {
+  margin-top: clamp(20px, 4vw, 38px);
+  display: grid;
+  gap: clamp(14px, 2vw, 22px);
+}
+
+.journal-entry {
+  padding: clamp(18px, 3vw, 28px);
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(148, 171, 208, 0.46);
+  background: rgba(242, 248, 255, 0.54);
+}
+
+.journal-entry__date {
+  margin: 0;
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #6f86ae;
+  font-weight: 700;
+}
+
+.journal-entry h3 {
+  margin: 10px 0 0;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(23px, 3vw, 32px);
+  line-height: 0.95;
+  font-weight: 400;
+}
+
+.journal-entry p {
+  margin: 11px 0 0;
+  font-size: 13px;
+  line-height: 1.72;
+  color: #556b93;
+}
+
 .track-card,
 .program-card {
   border-radius: var(--radius-md);
@@ -577,6 +682,15 @@ a {
 
   .program-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .story-grid {
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: stretch;
+  }
+
+  .journal-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 
